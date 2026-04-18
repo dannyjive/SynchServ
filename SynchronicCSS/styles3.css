@@ -1,0 +1,191 @@
+/*  
+TODO: Add email link to about page/ vision rect button
+TODO: Fix quote on first testimonial card in About section
+*/
+
+
+/* ------ Bullets on small paragraphs ------ */
+ul[data-rte-list] li>*:first-child::before {
+  content: "▶"; /* Unicode for arrow */
+  color: #FFF7F0; /* Optional: Change color */
+  font-weight: bold;
+  margin-right: 0px;
+}
+
+/* ----- Sticky Section Background Polygon ----- */
+
+/* Target the container for the background image */
+.section-background img[data-image*="Polygon+3"] {
+  position: fixed !important;
+  left: auto !important;
+  right: 0 !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  
+  /* Lock original dimensions */
+  width: 684px !important;
+  height: 1240px !important;
+  
+  /* Ensure it doesn't stretch or distort */
+  object-fit: contain !important;
+  object-position: right !important;
+  
+  z-index: 0;
+  opacity: 1 !important;
+}
+
+/* ----- Target the container for the background image ------ */
+.section-background img[data-image*="Polygon+3"] {
+  position: fixed !important;
+  left: auto !important;
+  right: 0 !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  
+  /* Lock original dimensions */
+  width: 684px !important;
+  height: 1240px !important;
+  
+  /* Ensure it doesn't stretch or distort */
+  object-fit: contain !important;
+  object-position: right !important;
+  
+  z-index: 0;
+  opacity: 1 !important;
+}
+
+/* ------ Move Nav Header to Verticle ------- */
+
+  /* 1. Main Sidebar Container */
+  #header {
+    width: 260px !important; 
+    height: 100vh !important;
+    position: fixed !important;
+    left: 0 !important;
+    top: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-end !important; 
+   background: linear-gradient(to right, #00626B, #6fa5ac) !important;
+    border-left: 10px solid #CB7835 !important;
+    z-index: 9999 !important;
+    box-sizing: border-box !important;
+    padding: 20px 20px 60px 0px !important;
+    pointer-events: none !important; /* Passes clicks through empty space to the page */
+  }
+
+  /* 2. Containers & Clickability */
+  .header-announcement-bar-wrapper, 
+  .header-inner, 
+  .header-display-desktop,
+  .header-title-nav-wrapper {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-end !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background-color: transparent !important;
+    background: transparent !important;
+    pointer-events: auto !important; /* Re-enables clicks for logo and menu */
+  }
+
+  /* 3. Logo Alignment */
+  .header-title {
+    order: 1 !important;
+    margin-bottom: 30px !important;
+    text-align: right !important;
+    width: 100% !important;
+  }
+
+  .header-title-text a, .header-title-text {
+    font-size: 2rem !important;
+    display: block !important;
+    white-space: nowrap !important;
+    text-align: right !important;
+  }
+  
+  /* Kill the specific Squarespace background layers */
+  .header-background-solid, 
+  .header-background-gradient, 
+  .header-background {
+    background-color: transparent !important;
+    background-image: none !important;
+    opacity: 0 !important;
+  }
+
+  /* 4. Nav Alignment */
+  .header-nav {
+    order: 2 !important;
+    width: 100% !important;
+  }
+
+  .header-nav-list {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-end !important;
+    width: 100% !important;
+  }
+
+  .header-nav-item {
+    margin: 5px 0 !important;
+    width: 100% !important;
+    display: flex !important;
+    justify-content: flex-end !important;
+  }
+
+  .header-nav-item a {
+    display: inline-block !important;
+    text-align: right !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+
+
+  /* Remove Home link specifically */
+  .header-nav-list .header-nav-item:first-child {
+    display: none !important;
+  }
+
+
+
+#siteWrapper {
+  padding-left: 260px !important;
+  box-sizing: border-box !important;
+}
+
+  /* Ensures background images fill the new width without gaps */
+  .section-background, 
+  .section-background-canvas, 
+  .section-background-content {
+    left: 0 !important;
+    width: 100% !important;
+  }
+
+  /* Keeps the Fluid Engine grid and Edit buttons aligned to the new center */
+  #sections, .page-section {
+    width: 100% !important;
+    margin-left: 0 !important;
+  }
+
+/* 6. Remove the top gap caused by the fixed header */
+#siteWrapper {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+}
+
+.header-announcement-bar-wrapper {
+  padding-top: 40px !important; /* This controls padding inside your sidebar instead */
+}
+
+/* Specifically target the first section to force it to the top */
+#sections > section:first-child {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+}
+
+  /* Ensures global scrolling behaves correctly */
+  html, body {
+    overflow-x: hidden !important;
+  }
