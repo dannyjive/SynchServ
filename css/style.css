@@ -1,8 +1,51 @@
+* {
+  border: red;
+  border-style: solid;
+  border-width: 1px;
+}
+
+/* GOOGLE FONT */
+
 .julius-sans-one-regular {
   font-family: "Julius Sans One", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
+
+/* COLORS */
+.lightestOrange {
+  color: #EFD2A7;
+  /* rgb(239 210 167) */
+}
+
+.lightOrange {
+  color: #f3bd72; 
+  /* rgba(243, 189, 114, 1)  */
+}
+
+.darkOrange {
+  color: #cb7835;
+  /* rgba(203, 120, 53, 1),*/
+}
+
+.teal {
+  color: #00626b;
+  /* rgba(0, 98, 107, 1) */
+}
+
+.darkBlue {
+  color: #122533;
+  /* rgba(18, 37, 51, 1) */
+}
+
+.offWhite {
+  color: #fff7f0
+  /* rgba(255, 247, 240, 1) */
+}
+
+
+
+/* BODY */
 
 body {
   font-family: "Archivo Narrow", sans-serif;
@@ -13,6 +56,39 @@ body {
   display: flex;
   color: #fff7f0;
   margin: 0; /* prevents weird spacing */
+}
+
+.displayFlexCentered {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.displayFlex {
+  display: flex;
+}
+
+/* SIDEBAR */
+#sidebar {
+  background: linear-gradient(to right, #00626b, #6fa5ac);
+  border-left: 10px solid #cb7835;
+  min-height: 100vh;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  position: sticky;
+  top: 0;
+
+  align-self: flex-start;
+}
+
+/* NAV (only navigation now) */
+nav {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
 }
 
 ul {
@@ -26,37 +102,15 @@ a {
   color: #fff7f0;
 }
 
-/* SIDEBAR */
-#sidebar {
-  background: linear-gradient(to right, #00626b, #6fa5ac);
-  border-left: 10px solid #cb7835;
-  height: 100vh;
-  width: 300px;
-  display: flex;
-  flex-direction: column; /* ✅ fixed */
-  padding: 20px;
-}
-
-/* NAV (only navigation now) */
-nav {
-  display: flex;
-  flex-direction: column;
-  text-align: right;
-}
-
 /* Push contact section to bottom */
 #locationContactText {
   margin-top: auto;
   text-align: right;
 }
 
-.orangeLettering {
-  color: #f3bd72;
-}
-
 /* MAIN CONTENT */
 
-main{
+main {
   flex: 1;
 }
 
@@ -82,4 +136,161 @@ h1 {
   align-items: center;
 
   text-align: center;
+}
+
+/* ///////////// SERVICES PAGE ////////// */
+
+/* PROJECT LEADERSHIP & SERVICES CARD*/
+
+.yellowCirc-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  max-width: 980px;
+
+  border-radius: 15px;
+  background: #f3bd72;
+  overflow: hidden;
+  z-index: -10;
+  text-align: center;
+  padding: 50px;
+}
+
+.yellowCirc-card::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+
+  width: 617px;
+  height: 617px;
+
+  top: -160px;
+  left: -160px;
+
+  border-radius: 50%;
+
+  background: linear-gradient(
+    15deg,
+    rgba(203, 120, 53, 1),
+    rgba(243, 189, 114, 1)
+  );
+}
+
+/* PHASE CARD */
+
+.phaseFontBoldSeventyFive{
+  font-size: 75px;
+  font-weight: bold;
+}
+
+.phaseNumberBoldFourHundred {
+  font-size: 400px;
+  font-family: "Lora", serif;
+  font-weight: bold;
+}
+
+.triangleBullets {
+  padding-left: 20px;
+}
+
+.triangleBullets::before {
+  content: "▶ "; 
+  color: #fff7f0; 
+  display: inline-block;
+  width: 1em; 
+  margin-left: -1em;
+}
+
+.phase-card {
+  display: flex;
+  position: relative;
+  max-width: 980px;
+  border-radius: 15px;
+  background: #00626b;
+  overflow: hidden;
+  z-index: -10;
+  text-align: left;
+  padding: 50px;
+}
+
+.phaseLogoCentered{
+  text-align: center;
+}
+
+.phase-card::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+
+  width: 642px;
+  height: 555px;
+
+  top: -240px;
+  left: -250px;
+
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+
+  background: linear-gradient(
+    0deg,
+    rgba(243, 189, 114, 1),
+    rgba(0, 98, 107, 1)
+  );
+}
+
+/* PARTNER IN SUCCESS CARD */
+
+.yellowTri-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  max-width: 724px;
+
+  border-radius: 15px;
+  background: #f3bd72;
+  overflow: hidden;
+  z-index: -10;
+  text-align: center;
+  padding: 50px;
+}
+
+.yellowTri-card::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+
+  width: 617px;
+  height: 617px;
+
+  top: -240px;
+  right: -200px;
+
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+
+  background: linear-gradient(
+    180deg,
+    rgba(203, 120, 53, 1),
+    rgba(243, 189, 114, 1)
+  );
+}
+
+/* ////////// PROJECTS PAGE ////////// */
+
+.yellowFade-card {
+  position: relative;
+  display: flex;
+  padding: 50px;
+  background: linear-gradient(
+    180deg,
+    rgba(243, 189, 114, 1),
+    rgb(239 210 167)
+  );  
+overflow: hidden;
+  background-position: right;
+}
+
+
+.textRight{
+  text-align: right;
 }

@@ -1,41 +1,51 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&family=Julius+Sans+One&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./css/style.css" />
-    <title>Synchronic Services - Services</title>
-  </head>
-  <body>
-    <header>
-      <nav>
-        <a href="index.html"><img src="img/SynchronicLogo_WhiteLogo.webp" /></a>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&family=Julius+Sans+One&family=Lora:wght@700&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="./css/style.css" />
+  <title>Synchronic Services - Services</title>
+</head>
+
+<body>
+  <header id="sidebar">
+    <nav>
+      <div id="navText">
+        <a href="index.html">
+          <img src="img/SynchronicLogo_WhiteLogo.webp" alt="Synchronic Services logo" />
+        </a>
         <ul>
           <li><a href="services.html">Services</a></li>
           <li><a href="projects.html">Projects</a></li>
           <li><a href="resources.html">Resources</a></li>
           <li><a href="about.html">About</a></li>
         </ul>
+      </div>
+    </nav>
 
-        <p>Location</p>
-        <p>Seattle, WA & the Greater Puget Sound Area</p>
-        <p>Contact</p>
-        <p>(814) 244 - 5199</p>
-        <p>shannon@synchronicservices.com</p>
-      </nav>
-    </header>
+    <div id="locationContactText">
+      <p><span class="lightOrange">Location</span> <br />Seattle, WA & <br />the Greater Puget Sound Area</p>
+      <p><span class="lightOrange">Contact</span><br />(814) 244 - 5199 <br />shannon@synchronicservices.com</p>
+    </div>
+  </header>
 
-    <main>
-      <!-- PROJECT CARD -->
-      <h3>Project Leadership & Services</h3>
-      <h4>Transforming Construction Complexity into Community Impact</h4>
-      <p>
+  <main class="displayFlexCentered">
+
+    <!-- PROJECT CARD -->
+
+    <div class="yellowCirc-card">
+      <h3 class="teal">Project Leadership & Services</h3>
+      <h4 class="teal">Transforming Construction Complexity into Community Impact</h4>
+      <p class="darkBlue">
         A capital project is a generational opportunity, but the path from
         vision to reality is often paved with technical hurdles and high-stakes
         financial decisions. Synchronic Services carries the technical weight of
@@ -44,130 +54,180 @@
         provides the independent advocacy required to manage risk, control
         costs, and ensure every dollar is mission-critical.
       </p>
+    </div>
 
-      <!-- OUR APPROACH -->
-      <h2>Our Approach</h2>
+    <!-- OUR APPROACH -->
+    <h2 class="teal">Our Approach</h2>
 
-      <!-- PHASE CARD 1 -->
-      <h4>Strategic Definition & Mission-Aligned Planning</h4>
-      <p>
-        The most consequential financial decisions happen in the "Conception
-        Phase." Synchronic Services ensures these early choices are rooted in
-        data and aligned with the organization's long-term goals.
-      </p>
-      <ul>
-        <li>
-          Needs Assessment: Defining the "why" and "how" of a space before the
-          first drawing begins to ensure the program drives the architecture.
-        </li>
-        <li>
-          Operational Alignment: Ensuring the layout reflects actual workflows
-          and community needs, prioritizing functionality over aesthetics.
-        </li>
-        <li>
-          Truth-In-Budgeting: Creating realistic cost models that include
-          "hidden" expenses—permits, fees, and furnishings—that often surprise
-          boards later.
-        </li>
-      </ul>
+    <!-- PHASE 1 CARD -->
+    <div class="phase-card">
+      <div class="phaseLogoCentered lightOrange">
+        <span class="phaseFontBoldSeventyFive">Phase</span>
+        <span class="phaseNumberBoldFourHundred">1</span>
+      </div>
 
-      <!-- PHASE CARD 2 -->
-      <h4>Specialized Support for Funding & Grants</h4>
-      <p>
-        Securing funding requires proving that a project is feasible and
-        professionally managed. The firm provides the technical validation that
-        donors, lenders, and grant-makers require to build trust.
-      </p>
-      <ul>
-        <li>
-          Washington State Grant Expertise: Specialized experience navigating
-          complex funding streams, including DOC, EDI, and Solar grants.
-        </li>
-        <li>
-          Feasibility & Due Diligence: Conducting site assessments and zoning
-          reviews to validate a project before significant capital is committed.
-        </li>
-        <li>
-          Technical Narratives: Translating complex construction details into
-          compelling language for capital campaigns and grant applications.
-        </li>
-      </ul>
+      <div>
+        <h4>Strategic Definition & Mission-Aligned Planning</h4>
+        <p>
+          The most consequential financial decisions happen in the "Conception
+          Phase." Synchronic Services ensures these early choices are rooted in
+          data and aligned with the organization's long-term goals.
+        </p>
+        <ul>
+          <li class="triangleBullets">
+            Needs Assessment: Defining the "why" and "how" of a space before the
+            first drawing begins to ensure the program drives the architecture.
+          </li>
+          <li class="triangleBullets">
+            Operational Alignment: Ensuring the layout reflects actual workflows
+            and community needs, prioritizing functionality over aesthetics.
+          </li>
+          <li class="triangleBullets">
+            Truth-In-Budgeting: Creating realistic cost models that include
+            "hidden" expenses—permits, fees, and furnishings—that often surprise
+            boards later.
+          </li>
+        </ul>
+      </div>
+    </div>
 
-      <!-- PHASE CARD 3 -->
-      <h4>Design Advocacy & Smart Stewardship</h4>
-      <p>
-        During the design phase, Synchronic Services acts as a bridge between
-        architectural creativity and financial reality, ensuring the
-        organization's interests are protected at every turn.
-      </p>
-      <ul>
-        <li>
-          Value Engineering: Analyzing design choices for Tenant Improvements
-          and Core & Shell renovations to find high-impact, low-maintenance
-          alternatives.
-        </li>
-        <li>
-          Constructability Reviews: Catching errors and omissions on paper
-          before they become expensive change orders in the field.
-        </li>
-        <li>
-          Team Selection & Vetting: Assisting in the procurement of architects,
-          engineers, and consultants who value community impact.
-        </li>
-      </ul>
+    <!-- PHASE 2 CARD -->
+    <div class="phase-card">
 
-      <!-- PHASE CARD 4 -->
-      <h4>Construction Oversight & Financial Defense</h4>
-      <p>
-        Once construction begins, the firm serves as the "eyes and ears"
-        on-site, providing rigorous accountability and protecting the project
-        budget.
-      </p>
-      <ul>
-        <li>
-          On-Site Representation: Regular quality control visits to ensure the
-          work matches the approved vision and contract specifications.
-        </li>
-        <li>
-          Budget & Schedule Defense: Rigorous monitoring of contractor pay
-          applications and change orders to prevent budget creep.
-        </li>
-        <li>
-          Centralized Communication: Acting as the single point of contact for
-          the contractor and design team, shielding executive leadership from
-          daily construction friction.
-        </li>
-      </ul>
+      <div class="phaseLogoCentered lightOrange">
+        <span class="phaseFontBoldSeventyFive">Phase</span>
+        <span class="phaseNumberBoldFourHundred">2</span>
+      </div>
+      <div>
+        <h4>Specialized Support for Funding & Grants</h4>
+        <p>
+          Securing funding requires proving that a project is feasible and
+          professionally managed. The firm provides the technical validation that
+          donors, lenders, and grant-makers require to build trust.
+        </p>
+        <ul>
+          <li class="triangleBullets">
+            Washington State Grant Expertise: Specialized experience navigating
+            complex funding streams, including DOC, EDI, and Solar grants.
+          </li>
+          <li class="triangleBullets">
+            Feasibility & Due Diligence: Conducting site assessments and zoning
+            reviews to validate a project before significant capital is committed.
+          </li>
+          <li class="triangleBullets">
+            Technical Narratives: Translating complex construction details into
+            compelling language for capital campaigns and grant applications.
+          </li>
+        </ul>
+      </div>
+    </div>
 
-      <!-- PHASE CARD 5 -->
-      <h4>Closeout & Operational Handover</h4>
-      <p>
-        A project is only successful when the doors open seamlessly. Synchronic
-        Services manages the transition from a construction site to a functional
-        community asset.
-      </p>
-      <ul>
-        <li>
-          Punch List Management: Oversight of final details and equipment
-          commissioning to ensure everything is operational from day one.
-        </li>
-        <li>
-          Seamless Handover: Ensuring the organization has all necessary
-          documentation, warranties, and training to operate the new facility
-          sustainably.
-        </li>
-      </ul>
+    <!-- PHASE 3 CARD -->
+    <div class="phase-card">
+      <div class="phaseLogoCentered lightOrange">
+        <span class="phaseFontBoldSeventyFive">Phase</span>
+        <span class="phaseNumberBoldFourHundred">3</span>
+      </div>
 
-      <!-- PARTNER CARD -->
-      <h3>Your Partner in Success</h3>
-      <p>
-        A capital project should be a milestone for an organization, not a
-        burden. Whether navigating the early planning stages or requiring
-        oversight through the construction phase, Synchronic Services is
-        dedicated to delivering sustainable, impactful results that honor the
-        mission and the community.
-      </p>
-      <button>Schedule a Consultation to Discuss Your Project</button>
-    </main>
-  </body>
+      <div>
+        <h4>Design Advocacy & Smart Stewardship</h4>
+        <p>
+          During the design phase, Synchronic Services acts as a bridge between
+          architectural creativity and financial reality, ensuring the
+          organization's interests are protected at every turn.
+        </p>
+        <ul>
+          <li class="triangleBullets">
+            Value Engineering: Analyzing design choices for Tenant Improvements
+            and Core & Shell renovations to find high-impact, low-maintenance
+            alternatives.
+          </li>
+          <li class="triangleBullets">
+            Constructability Reviews: Catching errors and omissions on paper
+            before they become expensive change orders in the field.
+          </li>
+          <li class="triangleBullets">
+            Team Selection & Vetting: Assisting in the procurement of architects,
+            engineers, and consultants who value community impact.
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- PHASE 4 CARD -->
+    <div class="phase-card">
+      <div class="phaseLogoCentered lightOrange">
+        <span class="phaseFontBoldSeventyFive">Phase</span>
+        <span class="phaseNumberBoldFourHundred">4</span>
+      </div>
+
+      <div>
+        <h4>Construction Oversight & Financial Defense</h4>
+        <p>
+          Once construction begins, the firm serves as the "eyes and ears"
+          on-site, providing rigorous accountability and protecting the project
+          budget.
+        </p>
+        <ul>
+          <li class="triangleBullets">
+            On-Site Representation: Regular quality control visits to ensure the
+            work matches the approved vision and contract specifications.
+          </li>
+          <li class="triangleBullets">
+            Budget & Schedule Defense: Rigorous monitoring of contractor pay
+            applications and change orders to prevent budget creep.
+          </li>
+          <li class="triangleBullets">
+            Centralized Communication: Acting as the single point of contact for
+            the contractor and design team, shielding executive leadership from
+            daily construction friction.
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- PHASE 5 CARD -->
+
+    <div class="phase-card">
+
+      <div class="phaseLogoCentered lightOrange">
+        <span class="phaseFontBoldSeventyFive">Phase</span>
+        <span class="phaseNumberBoldFourHundred">5</span>
+      </div>
+
+      <div>
+        <h4>Closeout & Operational Handover</h4>
+        <p>
+          A project is only successful when the doors open seamlessly. Synchronic
+          Services manages the transition from a construction site to a functional
+          community asset.
+        </p>
+        <ul>
+          <li>
+            Punch List Management: Oversight of final details and equipment
+            commissioning to ensure everything is operational from day one.
+          </li>
+          <li>
+            Seamless Handover: Ensuring the organization has all necessary
+            documentation, warranties, and training to operate the new facility
+            sustainably.
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- PARTNER IN SUCCESS CARD -->
+     <div class="yellowTri-card">
+    <h3 class="teal">Your Partner in Success</h3>
+    <p class="darkBlue">
+      A capital project should be a milestone for an organization, not a
+      burden. Whether navigating the early planning stages or requiring
+      oversight through the construction phase, Synchronic Services is
+      dedicated to delivering sustainable, impactful results that honor the
+      mission and the community.
+    </p>
+    <button>Schedule a Consultation to Discuss Your Project</button>
+    </div>
+  </main>
+</body>
+
 </html>
