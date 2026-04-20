@@ -1,7 +1,6 @@
 * {
-  border: red;
-  border-style: solid;
-  border-width: 1px;
+  border: red 1px solid;
+  box-sizing: border-box;
 }
 
 /* GOOGLE FONT */
@@ -58,21 +57,61 @@ body {
   background-color: #fff7f0;
   display: flex;
   color: #fff7f0;
-  margin: 0; 
+  margin: 0;
+  padding: 0;
 }
 
-main {
-  position: relative;
+/* //// HOME PAGE //// */
+
+.hideInjections {
+  overflow: hidden;
 }
 
-
-/* .triangleImageBackground {
-  flex: 1;
+/* BG TRIANGLES */
+.content-area {
   position: relative;
-  background-image: url("../img/BgTri_Left.png"), url("../img/BgTri_Right.png");
-  background-position: left center, right center;
-  background-repeat: no-repeat, no-repeat;
+  overflow: hidden;
+  height: 100vh;
+  padding: 40px;
+}
+
+.triangle {
+  position: absolute;
+  z-index: -1;
+  width: 0;
+  height: 0;
+}
+
+/* Possible alt for shrinking BG triangles on small screen. Need to test to see if we really like this or not.
+
+.triangleLeft, .triangleRight {
+  width: 50vw; 
+  height: 50vw;
+  max-width: 900px;
+  max-height: 900px;
 } */
+
+.triangleLeft {
+  width: 900px;
+  height: 900px;
+  background-image: url("../img/BgTri_Left.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  top: 25px;
+  left: -100px;
+}
+
+.triangleRight {
+  width: 900px;
+  height: 900px;
+  background-image: url("../img/BgTri_Right.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  top: 25px;
+  right: -100px;
+}
+
+/* BG ORANGE TRIANGLE FOR OTHER PAGES */
 
 .orangeTriangleBG {
   background-image: url("../img/BgTri_Orange.png");
@@ -92,10 +131,11 @@ main {
 }
 
 /* SIDEBAR */
+
 #sidebar {
   background: linear-gradient(to right, #00626b, #6fa5ac);
   border-left: 10px solid #cb7835;
-  min-height: 100vh;
+  height: 100vh;
   width: 300px;
   display: flex;
   flex-direction: column;
@@ -132,8 +172,17 @@ a {
 
 /* MAIN CONTENT */
 
-main {
+main.content-area {
   flex: 1;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  padding: 40px;
+
+  /* Centering Logic */
+  display: flex;
+  justify-content: center; /* Horizontal center */
+  align-items: center; /* Vertical center */
 }
 
 h1 {
@@ -144,20 +193,20 @@ h1 {
   color: #00626b;
 }
 
-/* CIRCLE */
+/* ORANGE HOME PAGE CIRCLE */
+
 .circle {
   width: 550px;
   height: 550px;
   background-color: #f3bd72;
   border-radius: 50%;
   padding: 20px;
-
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-
   text-align: center;
+  margin: 0;
 }
 
 /* ///////////// SERVICES PAGE ////////// */
@@ -320,7 +369,6 @@ h1 {
 }
 
 .testimonial-card {
-
   position: relative;
   max-width: 724px;
 
@@ -354,7 +402,6 @@ cite {
   text-align: right;
 }
 
-
 /* /////// RESOURCE PAGE /////// */
 
 .yellowTriLeft-card {
@@ -387,7 +434,7 @@ cite {
 }
 .yellowTriRight-card {
   display: flex;
-  
+
   justify-content: center;
   position: relative;
   max-width: 724px;
@@ -454,7 +501,6 @@ cite {
 }
 
 .about-card {
-
   position: relative;
   max-width: 724px;
 
