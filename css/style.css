@@ -58,7 +58,26 @@ body {
   background-color: #fff7f0;
   display: flex;
   color: #fff7f0;
-  margin: 0; /* prevents weird spacing */
+  margin: 0; 
+}
+
+main {
+  position: relative;
+}
+
+
+/* .triangleImageBackground {
+  flex: 1;
+  position: relative;
+  background-image: url("../img/BgTri_Left.png"), url("../img/BgTri_Right.png");
+  background-position: left center, right center;
+  background-repeat: no-repeat, no-repeat;
+} */
+
+.orangeTriangleBG {
+  background-image: url("../img/BgTri_Orange.png");
+  background-position: top right;
+  background-repeat: no-repeat;
 }
 
 .displayFlexCentered {
@@ -242,7 +261,7 @@ h1 {
 }
 
 /* PARTNER IN SUCCESS CARD */
-
+/* TODO: is this a repeat of a different card? */
 .yellowTri-card {
   display: flex;
   flex-direction: column;
@@ -340,11 +359,9 @@ cite {
 
 .yellowTriLeft-card {
   display: flex;
-  
   justify-content: center;
   position: relative;
   max-width: 724px;
-
   border-radius: 15px;
   background: #f3bd72;
   overflow: hidden;
@@ -397,4 +414,59 @@ cite {
     rgba(203, 120, 53, 1),
     rgba(243, 189, 114, 1)
   );
+}
+
+/* ////// ABOUT ////// */
+
+.yellowCircRight-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  max-width: 980px;
+
+  border-radius: 15px;
+  background: #f3bd72;
+  overflow: hidden;
+  z-index: -10;
+  text-align: center;
+  padding: 50px;
+}
+
+.yellowCircRight-card::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+
+  width: 617px;
+  height: 617px;
+
+  top: -160px;
+  left: -160px;
+
+  border-radius: 50%;
+
+  background: linear-gradient(
+    15deg,
+    rgba(203, 120, 53, 1),
+    rgba(243, 189, 114, 1)
+  );
+}
+
+.about-card {
+
+  position: relative;
+  max-width: 724px;
+
+  border-radius: 15px;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 98, 107, 1),
+    rgba(111, 165, 172, 1)
+  );
+
+  overflow: hidden;
+  z-index: -10;
+  text-align: center;
+  padding: 50px;
 }
