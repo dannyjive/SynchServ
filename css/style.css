@@ -1,6 +1,8 @@
 * {
-  border: red 1px solid;
-  box-sizing: border-box;
+  /* border: red 1px solid;
+  box-sizing: border-box; */
+  margin: 0;
+  padding: 0;
 }
 
 /* GOOGLE FONT */
@@ -45,6 +47,54 @@
 .offWhite {
   color: #fff7f0;
   /* rgba(255, 247, 240, 1) */
+}
+/* TODO: Add drop shadows */
+/* TODO: Make sure sidebar doesn't make email sit off bottom of window. */
+/* HEADERS & PARA*/
+
+h3 {
+  font-size: 24px;
+  font-weight: bolder;
+  padding: 0 0 20px 0;
+}
+
+h4 {
+  font-size: 20px;
+  font-weight: 500;
+  padding: 0 0 20px 0;
+}
+
+/* BUTTONS */
+
+.blueButton {
+  display: inline-block;
+  background-color: #00626b;
+  color: #fff7f0;
+  border-radius: 15px;
+  padding: 20px;
+  margin: 0 10px;
+  font-family: "Archivo Narrow";
+  font-size: 1em;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.blueButton:hover {
+  background-color: #122533;
+}
+
+.whiteButton {
+  color: #00626b;
+  background-color: #fff7f0;
+  border-radius: 15px;
+  padding: 20px;
+  margin: 0 10px;
+  font-family: "Archivo Narrow";
+  font-size: 1em;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 /* BODY */
@@ -137,26 +187,33 @@ body {
   border-left: 10px solid #cb7835;
   height: 100vh;
   width: 300px;
+  min-width: 300px;
+  flex-shrink: 0;
   display: flex;
   flex-direction: column;
   padding: 20px;
   position: sticky;
   top: 0;
-
   align-self: flex-start;
 }
 
-/* NAV (only navigation now) */
+/* NAV */
 nav {
   display: flex;
   flex-direction: column;
   text-align: right;
+  font-size: 20px;
+  font-weight: 600;
 }
 
 ul {
   list-style-type: none;
-  padding: 0; /* removes default indent */
+  padding: 0;
   margin: 0;
+}
+
+li {
+  padding: 10px 0;
 }
 
 a {
@@ -164,25 +221,37 @@ a {
   color: #fff7f0;
 }
 
-/* Push contact section to bottom */
 #locationContactText {
   margin-top: auto;
   text-align: right;
 }
 
+.sizeTwentyBold {
+  font-size: 20px;
+  font-weight: 800;
+}
+
 /* MAIN CONTENT */
 
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+}
+
+/* Home Page BG Triangles */
 main.content-area {
+  display: flex;
   flex: 1;
   height: 100vh;
   position: relative;
   overflow: hidden;
   padding: 40px;
-
-  /* Centering Logic */
   display: flex;
-  justify-content: center; /* Horizontal center */
-  align-items: center; /* Vertical center */
+  justify-content: center;
+  align-items: center;
 }
 
 h1 {
@@ -223,7 +292,7 @@ h1 {
   border-radius: 15px;
   background: #f3bd72;
   overflow: hidden;
-  z-index: -10;
+  z-index: 1;
   text-align: center;
   padding: 50px;
 }
@@ -240,6 +309,7 @@ h1 {
   left: -160px;
 
   border-radius: 50%;
+  z-index: -1;
 
   background: linear-gradient(
     15deg,
@@ -280,7 +350,7 @@ h1 {
   border-radius: 15px;
   background: #00626b;
   overflow: hidden;
-  z-index: -10;
+  z-index: 1;
   text-align: left;
   padding: 50px;
 }
@@ -310,35 +380,31 @@ h1 {
 }
 
 /* PARTNER IN SUCCESS CARD */
-/* TODO: is this a repeat of a different card? */
-.yellowTri-card {
+
+/* Used on Projects page. "Your Partner in Success" Card */
+.shortYellowTriRight-card {
   display: flex;
   flex-direction: column;
   justify-content: center;
   position: relative;
   max-width: 724px;
-
   border-radius: 15px;
   background: #f3bd72;
   overflow: hidden;
-  z-index: -10;
+  z-index: 1;
   text-align: center;
   padding: 50px;
 }
 
-.yellowTri-card::before {
+.shortYellowTriRight-card::before {
   content: "";
   position: absolute;
   z-index: -1;
-
   width: 617px;
   height: 617px;
-
   top: -240px;
   right: -200px;
-
   clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-
   background: linear-gradient(
     180deg,
     rgba(203, 120, 53, 1),
@@ -348,17 +414,41 @@ h1 {
 
 /* ////////// PROJECTS PAGE ////////// */
 
-.yellowFade-card {
+.yellowFade-cardLeft,
+.yellowFade-cardRight {
   position: relative;
   display: flex;
-  padding: 50px;
+  margin: 50px 0 50px 0;
   background: linear-gradient(180deg, rgba(243, 189, 114, 1), rgb(239 210 167));
   overflow: hidden;
+}
+
+.yellowFade-cardRight img,
+.yellowFade-cardLeft img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.yellowFade-cardRight {
+  padding: 50px 0 50px 50px;
   background-position: right;
+}
+
+.yellowFade-cardLeft {
+  padding: 50px 50px 50px 0;
+  background-position: left;
 }
 
 .textRight {
   text-align: right;
+}
+
+.textContainer {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: space-between;
 }
 
 /* TESTIMONIAL CARD */
@@ -368,21 +458,26 @@ h1 {
   justify-content: center;
 }
 
+blockquote {
+  font-size: 24px;
+  max-width: 670px;
+}
+
 .testimonial-card {
   position: relative;
-  max-width: 724px;
-
   border-radius: 15px;
   background: linear-gradient(
     0deg,
     rgba(0, 98, 107, 1),
     rgba(111, 165, 172, 1)
   );
-  /* background: #00626b; */
   overflow: hidden;
-  z-index: -10;
+  z-index: 1;
   text-align: center;
-  padding: 50px;
+  padding: 50px 100px;
+  margin: 50px 0;
+  /* x-offset | y-offset | blur | color */
+  box-shadow: 5px 10px 10px rgba(53, 47, 107, 0.2);
 }
 
 .testimonial-card::before {
@@ -390,34 +485,37 @@ h1 {
   position: absolute;
   z-index: -1;
   font-family: "Lora", serif;
-  font-size: 1300px;
-  color: rgba(111, 165, 172, 0.5);
+  font-size: 1000px;
+  color: rgba(111, 165, 172, 0.4);
 
-  top: -400px;
+  top: -270px;
   left: 0px;
 }
 
 cite {
   display: block;
   text-align: right;
+  margin-top: 30px;
+  font-size: 20px;
 }
 
 /* /////// RESOURCE PAGE /////// */
 
-.yellowTriLeft-card {
-  display: flex;
-  justify-content: center;
+.yellowImgRight-card {
   position: relative;
-  max-width: 724px;
-  border-radius: 15px;
+  display: flex;
+  align-items: stretch;
+  max-width: 980px;
+  min-height: 364px;
   background: #f3bd72;
-  overflow: hidden;
-  z-index: -10;
-  text-align: left;
-  padding: 50px;
+  border-radius: 15px;
+  overflow: hidden; 
+  z-index: 1;
+  /* padding: 60px; */
+  margin: 50px auto;
 }
 
-.yellowTriLeft-card::before {
+.yellowImgRight-card::before {
   content: "";
   position: absolute;
   z-index: -1;
@@ -432,22 +530,99 @@ cite {
     rgba(243, 189, 114, 1)
   );
 }
-.yellowTriRight-card {
-  display: flex;
 
+.text-content-left {
+  width: 40%; 
+  text-align: left;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.text-content-left .blueButton {
+  align-self: flex-start;
+  margin-top: auto;
+  margin-left: 0;
+  width: 200px;
+  text-align: center;
+  font-size: 1.5em;
+}
+
+.clipped-image-right {
+  /* pin img to the right */
+  position: absolute;
+  right: 1px; 
+  top: 50%;
+  transform: translateY(-50%);
+  width: 486px;
+  height: 364px;
+  object-fit: contain;
+}
+
+/* .yellowImgRight-card {
+  display: flex;
   justify-content: center;
   position: relative;
-  max-width: 724px;
-
+  max-width: 980px;
+  
   border-radius: 15px;
   background: #f3bd72;
   overflow: hidden;
-  z-index: -10;
-  text-align: right;
+  z-index: 1;
+  text-align: left;
   padding: 50px;
 }
 
-.yellowTriRight-card::before {
+
+
+
+
+.yellowImgLeft-card {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  max-width: 980px;
+  
+  border-radius: 15px;
+  background: #f3bd72;
+  overflow: hidden;
+  z-index: 1;
+  text-align: right;
+
+}
+
+.yellowImgLeft-card::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 617px;
+  height: 617px;
+  top: -240px;
+  right: -200px;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(203, 120, 53, 1),
+    rgba(243, 189, 114, 1)
+    );
+  }
+} */
+
+.yellowImgLeft-card {
+  position: relative;
+  display: flex;
+  align-items: stretch;
+  max-width: 980px;
+  min-height: 364px;
+  background: #f3bd72;
+  border-radius: 15px;
+  overflow: hidden; 
+  z-index: 1;
+  margin: 50px auto;
+}
+
+.yellowImgLeft-card::before {
   content: "";
   position: absolute;
   z-index: -1;
@@ -463,21 +638,124 @@ cite {
   );
 }
 
-/* ////// ABOUT ////// */
+.text-content-right {
+  width: 40%; 
+  text-align: right;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-left: auto;
+}
+
+.text-content-right .blueButton {
+  align-self: flex-end;
+  margin-top: auto;
+  margin-right: 0;
+  width: 200px;
+  text-align: center;
+  font-size: 1.5em;
+}
+
+.clipped-image-left {
+  /* pin img to the right */
+  position: absolute;
+  left: 0px; 
+  top: 50%;
+  transform: translateY(-50%);
+  width: 486px;
+  height: 364px;
+  object-fit: contain;
+}
+  
+  /* ////// ABOUT ////// */
+  
+/* "Our Mission" card */
+.shortYellowTriLeft-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  max-width: 724px;
+  border-radius: 15px;
+  background: #f3bd72;
+  overflow: hidden;
+  z-index: 1;
+  text-align: center;
+  padding: 30px 50px 50px 50px;
+  margin: 50px 0;
+}
+
+.shortYellowTriLeft-card::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 617px;
+  height: 617px;
+  top: -240px;
+  left: -350px;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(203, 120, 53, 1),
+    rgba(243, 189, 114, 1)
+  );
+}
+
+/* About Card */
+
+.about-card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  max-width: 980px;
+  min-height: 500px;
+  border-radius: 15px;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 98, 107, 1),
+    rgba(111, 165, 172, 1)
+  );
+  overflow: hidden;
+  padding: 60px;
+  margin: 50px auto;
+}
+
+.about-content {
+  width: 50%;
+  text-align: left;
+  z-index: 2;
+}
+
+.about-content p {
+  padding: 10px 0;
+}
+
+.about-image {
+  position: absolute;
+  right: -60px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 600px;
+  height: 600px;
+  z-index: 1;
+}
+
+/* Let's Build your Vision Card */
 
 .yellowCircRight-card {
   display: flex;
   flex-direction: column;
   justify-content: center;
   position: relative;
-  max-width: 980px;
-
+  max-width: 731px;
   border-radius: 15px;
   background: #f3bd72;
   overflow: hidden;
-  z-index: -10;
+  z-index: 1;
   text-align: center;
   padding: 50px;
+  margin: 50px;
 }
 
 .yellowCircRight-card::before {
@@ -489,30 +767,51 @@ cite {
   height: 617px;
 
   top: -160px;
-  left: -160px;
+  right: -160px;
 
   border-radius: 50%;
-
+  z-index: -1;
   background: linear-gradient(
-    15deg,
+    295deg,
     rgba(203, 120, 53, 1),
     rgba(243, 189, 114, 1)
   );
 }
 
-.about-card {
-  position: relative;
-  max-width: 724px;
+.buttonContainer {
+  padding: 30px 0 10px 0;
+}
 
-  border-radius: 15px;
-  background: linear-gradient(
-    180deg,
-    rgba(0, 98, 107, 1),
-    rgba(111, 165, 172, 1)
-  );
 
-  overflow: hidden;
-  z-index: -10;
-  text-align: center;
-  padding: 50px;
+
+
+
+
+
+
+
+/* --- MOBILE STYLES --- */
+@media (max-width: 768px) {
+  .yellowImgRight-card {
+    flex-direction: column; /* Stacks items vertically */
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  .clipped-image {
+    /* Reset everything so it behaves like a normal image at the top */
+    position: relative;
+    right: 0;
+    top: 0;
+    transform: none;
+    
+    width: 280px; /* Smaller for mobile */
+    height: 280px;
+    margin: 0 auto 30px auto; /* Centered with space below it */
+  }
+
+  .text-content {
+    width: 100%; /* Take full width on mobile */
+    text-align: center;
+  }
 }
