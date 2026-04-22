@@ -1,5 +1,5 @@
 
-/* TODO: Make sure sidebar doesn't make email sit off bottom of window. */
+
 
 * {
   /* border: red 1px solid;
@@ -116,6 +116,7 @@ h4 {
 
 .whiteButton:hover {
   background-color: #cb7835;
+  color: #fff7f0;
 }
 
 /* BODY */
@@ -132,6 +133,8 @@ body {
   padding: 0;
 }
 
+
+
 /* //// HOME PAGE //// */
 
 /* BG TRIANGLES */
@@ -139,7 +142,7 @@ body {
   position: relative;
   overflow: hidden;
   height: 100vh;
-  padding: 40px;
+  /* padding: 40px; */
 }
 
 .triangle {
@@ -238,6 +241,10 @@ nav {
   font-weight: 600;
 }
 
+nav ul li a:hover {
+color: #efd2a7;
+}
+
 ul {
   list-style-type: none;
   padding: 0;
@@ -284,7 +291,7 @@ main.content-area {
   height: 100vh;
   position: relative;
   overflow: hidden;
-  padding: 40px;
+  /* padding: 40px; */
   display: flex;
   justify-content: center;
   align-items: center;
