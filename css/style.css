@@ -1,7 +1,5 @@
-/* TODO: Add drop shadows */
+
 /* TODO: Make sure sidebar doesn't make email sit off bottom of window. */
-/* TODO: Swap BG triangle to CSS */
-/* TODO: Swap images to .webp */
 
 * {
   /* border: red 1px solid;
@@ -75,6 +73,12 @@ h4 {
   text-underline-offset: 4px;
 }
 
+.underlineMe:hover {
+    text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+}
+
 /* BUTTONS */
 
 .blueButton {
@@ -96,7 +100,7 @@ h4 {
 }
 
 .whiteButton {
-display: inline-block;
+  display: inline-block;
   color: #00626b;
   background-color: #fff7f0;
   border-radius: 15px;
@@ -130,10 +134,6 @@ body {
 
 /* //// HOME PAGE //// */
 
-.hideInjections {
-  overflow: hidden;
-}
-
 /* BG TRIANGLES */
 .content-area {
   position: relative;
@@ -161,30 +161,42 @@ body {
 .triangleLeft {
   width: 900px;
   height: 900px;
-  background-image: url("../img/BgTri_Left.png");
+  background-image: url("../img/BgTri_Left.webp");
   background-size: contain;
   background-repeat: no-repeat;
-  top: 25px;
+  top: 85px;
   left: -100px;
 }
 
 .triangleRight {
   width: 900px;
   height: 900px;
-  background-image: url("../img/BgTri_Right.png");
+  background-image: url("../img/BgTri_Right.webp");
   background-size: contain;
   background-repeat: no-repeat;
-  top: 25px;
+  top: 85px;
   right: -100px;
 }
 
 /* BG ORANGE TRIANGLE FOR OTHER PAGES */
 
-.orangeTriangleBG {
-  background-image: url("../img/BgTri_Orange.png");
-  background-position: top right;
-  background-repeat: no-repeat;
+
+.bg-triangle {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 1030px;
+  height: 100vh;
+  z-index: -1; 
+  pointer-events: none;
+  background: linear-gradient(
+    250deg, 
+    #c87934 50%,   
+    transparent 50%
+  );
 }
+
+
 
 .displayFlexCentered {
   display: flex;
@@ -202,15 +214,18 @@ body {
 #sidebar {
   background: linear-gradient(to right, #00626b, #6fa5ac);
   border-left: 10px solid #cb7835;
+  position: fixed;
+  top: 0;
+  left: 0;
   height: 100vh;
-  width: 300px;
+  box-sizing: border-box;
+
   min-width: 300px;
   flex-shrink: 0;
   display: flex;
   flex-direction: column;
   padding: 20px;
   position: sticky;
-  top: 0;
   align-self: flex-start;
 }
 
@@ -241,6 +256,10 @@ a {
 #locationContactText {
   margin-top: auto;
   text-align: right;
+}
+
+#locationContactText p {
+  padding: 10px 0;
 }
 
 .sizeTwentyBold {
@@ -282,7 +301,7 @@ main.content-area {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 100px;
+  gap: 50px;
   align-items: center;
   text-align: center;
   margin: 0;
@@ -304,7 +323,6 @@ main.content-area {
   position: relative;
   max-width: 980px;
   min-height: 260px;
-
   border-radius: 15px;
   background: #f3bd72;
   overflow: hidden;
@@ -312,6 +330,7 @@ main.content-area {
   text-align: center;
   padding: 50px;
   margin: 80px;
+  box-shadow: 0 10px 20px rgba(42, 42, 81, 0.2);
 }
 
 .yellowCirc-card::before {
@@ -392,6 +411,7 @@ main.content-area {
   text-align: left;
   padding: 0 50px;
   margin: 50px;
+  box-shadow: 0 10px 20px rgba(42, 42, 81, 0.2);
 }
 
 .phase-card::before {
@@ -412,14 +432,13 @@ main.content-area {
 
 /* PARTNER IN SUCCESS CARD */
 
-/* Used on Projects page. "Your Partner in Success" Card */
 .shortYellowTriRight-card {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   position: relative;
   max-width: 724px;
-  /* min-height: 250px; */
+
   border-radius: 15px;
   background: #f3bd72;
   overflow: hidden;
@@ -427,6 +446,7 @@ main.content-area {
   text-align: center;
   padding: 50px;
   margin: 50px;
+  box-shadow: 0 10px 20px rgba(42, 42, 81, 0.2);
 }
 
 .shortYellowTriRight-card::before {
@@ -514,7 +534,7 @@ blockquote {
   padding: 50px 100px;
   margin: 50px 0;
   /* x-offset | y-offset | blur | color */
-  box-shadow: 5px 10px 10px rgba(53, 47, 107, 0.2);
+  box-shadow: 0 10px 20px rgba(42, 42, 81, 0.2);
 }
 
 .testimonial-card::before {
@@ -538,6 +558,8 @@ cite {
 
 /* /////// RESOURCE PAGE /////// */
 
+/* Image on Right Card */
+
 .yellowImgRight-card {
   position: relative;
   display: flex;
@@ -546,10 +568,10 @@ cite {
   min-height: 364px;
   background: #f3bd72;
   border-radius: 15px;
-  overflow: hidden; 
+  overflow: hidden;
   z-index: 1;
-  /* padding: 60px; */
   margin: 50px auto;
+  box-shadow: 0 10px 20px rgba(42, 42, 81, 0.2);
 }
 
 .yellowImgRight-card::before {
@@ -569,7 +591,7 @@ cite {
 }
 
 .text-content-left {
-  width: 40%; 
+  width: 40%;
   text-align: left;
   padding: 40px;
   display: flex;
@@ -589,7 +611,7 @@ cite {
 .clipped-image-right {
   /* pin img to the right */
   position: absolute;
-  right: 1px; 
+  right: 1px;
   top: 50%;
   transform: translateY(-50%);
   width: 486px;
@@ -597,54 +619,7 @@ cite {
   object-fit: contain;
 }
 
-/* .yellowImgRight-card {
-  display: flex;
-  justify-content: center;
-  position: relative;
-  max-width: 980px;
-  
-  border-radius: 15px;
-  background: #f3bd72;
-  overflow: hidden;
-  z-index: 1;
-  text-align: left;
-  padding: 50px;
-}
-
-
-
-
-
-.yellowImgLeft-card {
-  display: flex;
-  justify-content: center;
-  position: relative;
-  max-width: 980px;
-  
-  border-radius: 15px;
-  background: #f3bd72;
-  overflow: hidden;
-  z-index: 1;
-  text-align: right;
-
-}
-
-.yellowImgLeft-card::before {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  width: 617px;
-  height: 617px;
-  top: -240px;
-  right: -200px;
-  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-  background: linear-gradient(
-    180deg,
-    rgba(203, 120, 53, 1),
-    rgba(243, 189, 114, 1)
-    );
-  }
-} */
+/* Image on Left Card */
 
 .yellowImgLeft-card {
   position: relative;
@@ -654,9 +629,10 @@ cite {
   min-height: 364px;
   background: #f3bd72;
   border-radius: 15px;
-  overflow: hidden; 
+  overflow: hidden;
   z-index: 1;
   margin: 50px auto;
+  box-shadow: 0 10px 20px rgba(42, 42, 81, 0.2);
 }
 
 .yellowImgLeft-card::before {
@@ -676,7 +652,7 @@ cite {
 }
 
 .text-content-right {
-  width: 40%; 
+  width: 40%;
   text-align: right;
   padding: 40px;
   display: flex;
@@ -697,16 +673,16 @@ cite {
 .clipped-image-left {
   /* pin img to the right */
   position: absolute;
-  left: 0px; 
+  left: 0px;
   top: 50%;
   transform: translateY(-50%);
   width: 486px;
   height: 364px;
   object-fit: contain;
 }
-  
-  /* ////// ABOUT ////// */
-  
+
+/* ////// ABOUT ////// */
+
 /* "Our Mission" card */
 .shortYellowTriLeft-card {
   display: flex;
@@ -721,6 +697,7 @@ cite {
   text-align: center;
   padding: 30px 50px 50px 50px;
   margin: 50px 0;
+  box-shadow: 0 10px 20px rgba(42, 42, 81, 0.2);
 }
 
 .shortYellowTriLeft-card::before {
@@ -756,6 +733,7 @@ cite {
   overflow: hidden;
   padding: 60px;
   margin: 50px auto;
+  box-shadow: 0 10px 20px rgba(42, 42, 81, 0.2);
 }
 
 .about-content {
@@ -793,6 +771,7 @@ cite {
   text-align: center;
   padding: 50px;
   margin: 50px;
+  box-shadow: 0 10px 20px rgba(42, 42, 81, 0.2);
 }
 
 .yellowCircRight-card::before {
@@ -819,14 +798,6 @@ cite {
   padding: 30px 0 10px 0;
 }
 
-
-
-
-
-
-
-
-
 /* --- MOBILE STYLES --- */
 @media (max-width: 768px) {
   .yellowImgRight-card {
@@ -841,7 +812,7 @@ cite {
     right: 0;
     top: 0;
     transform: none;
-    
+
     width: 280px; /* Smaller for mobile */
     height: 280px;
     margin: 0 auto 30px auto; /* Centered with space below it */
