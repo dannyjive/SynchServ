@@ -1,16 +1,13 @@
+/* TODO: Add drop shadows */
+/* TODO: Make sure sidebar doesn't make email sit off bottom of window. */
+/* TODO: Swap BG triangle to CSS */
+/* TODO: Swap images to .webp */
+
 * {
   /* border: red 1px solid;
   box-sizing: border-box; */
   margin: 0;
   padding: 0;
-}
-
-/* GOOGLE FONT */
-
-.julius-sans-one-regular {
-  font-family: "Julius Sans One", sans-serif;
-  font-weight: 400;
-  font-style: normal;
 }
 
 /* COLORS */
@@ -48,9 +45,17 @@
   color: #fff7f0;
   /* rgba(255, 247, 240, 1) */
 }
-/* TODO: Add drop shadows */
-/* TODO: Make sure sidebar doesn't make email sit off bottom of window. */
+
 /* HEADERS & PARA*/
+
+h1 {
+  font-family: "Julius Sans One", sans-serif;
+  font-size: 50px;
+}
+
+h2 {
+  font-size: 30px;
+}
 
 h3 {
   font-size: 24px;
@@ -60,7 +65,7 @@ h3 {
 
 h4 {
   font-size: 20px;
-  font-weight: 500;
+  font-weight: 600;
   padding: 0 0 20px 0;
 }
 
@@ -80,7 +85,7 @@ h4 {
   padding: 20px;
   margin: 0 10px;
   font-family: "Archivo Narrow";
-  font-size: 1em;
+  font-size: 1.5em;
   border: none;
   cursor: pointer;
   transition: background-color 0.3s ease;
@@ -91,16 +96,22 @@ h4 {
 }
 
 .whiteButton {
+display: inline-block;
   color: #00626b;
   background-color: #fff7f0;
   border-radius: 15px;
   padding: 20px;
   margin: 0 10px;
   font-family: "Archivo Narrow";
-  font-size: 1em;
+  font-size: 1.5em;
+  font-weight: 800;
   border: none;
   cursor: pointer;
   transition: background-color 0.3s ease;
+}
+
+.whiteButton:hover {
+  background-color: #cb7835;
 }
 
 /* BODY */
@@ -260,14 +271,6 @@ main.content-area {
   align-items: center;
 }
 
-h1 {
-  color: #122533;
-}
-
-.sluglines {
-  color: #00626b;
-}
-
 /* ORANGE HOME PAGE CIRCLE */
 
 .circle {
@@ -275,13 +278,18 @@ h1 {
   height: 550px;
   background-color: #f3bd72;
   border-radius: 50%;
-  padding: 20px;
+  padding: 60px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 100px;
   align-items: center;
   text-align: center;
   margin: 0;
+}
+
+.sluglines {
+  font-size: 30px;
 }
 
 /* ///////////// SERVICES PAGE ////////// */
@@ -292,8 +300,10 @@ h1 {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   position: relative;
   max-width: 980px;
+  min-height: 260px;
 
   border-radius: 15px;
   background: #f3bd72;
@@ -301,6 +311,7 @@ h1 {
   z-index: 1;
   text-align: center;
   padding: 50px;
+  margin: 80px;
 }
 
 .yellowCirc-card::before {
@@ -322,6 +333,15 @@ h1 {
     rgba(203, 120, 53, 1),
     rgba(243, 189, 114, 1)
   );
+}
+
+.projLeadershipTextContainer {
+  max-width: 650px;
+  padding: 0 90px 20px 90px;
+}
+
+.projLeadershipTextContainer p {
+  padding: 10px 0;
 }
 
 /* PHASE CARD */
@@ -396,15 +416,17 @@ h1 {
 .shortYellowTriRight-card {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   position: relative;
   max-width: 724px;
+  /* min-height: 250px; */
   border-radius: 15px;
   background: #f3bd72;
   overflow: hidden;
   z-index: 1;
   text-align: center;
   padding: 50px;
+  margin: 50px;
 }
 
 .shortYellowTriRight-card::before {
@@ -421,6 +443,10 @@ h1 {
     rgba(203, 120, 53, 1),
     rgba(243, 189, 114, 1)
   );
+}
+
+.shortYellowTri_TextContainer {
+  padding: 0 0 30px 0;
 }
 
 /* ////////// PROJECTS PAGE ////////// */
