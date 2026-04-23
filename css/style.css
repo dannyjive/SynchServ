@@ -316,6 +316,8 @@ main.content-area {
   justify-content: center;
   align-items: center;
   position: relative;
+
+  width: 100%;
   max-width: 980px;
   min-height: 260px;
   border-radius: 15px;
@@ -323,6 +325,7 @@ main.content-area {
   overflow: hidden;
   z-index: 1;
   text-align: center;
+
   padding: 50px;
   margin: 80px;
   box-shadow: 0 10px 20px rgba(42, 42, 81, 0.2);
@@ -350,7 +353,7 @@ main.content-area {
 }
 
 .projLeadershipTextContainer {
-  max-width: 650px;
+  max-width: 850px;
   padding: 0 90px 20px 90px;
 }
 
@@ -804,6 +807,17 @@ cite {
     margin-left: 0;
   }
 
+  .bg-triangle {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 330px;
+    height: 100vh;
+    z-index: -1;
+    pointer-events: none;
+    background: linear-gradient(250deg, #c87934 50%, transparent 50%);
+  }
+
   /* ////// MOBILE: PROJECTS PAGE ////// */
 
   /* TRIANGLES ON RIGHT CARD */
@@ -842,9 +856,9 @@ cite {
     margin: 0;
   }
 
-/* TRIANGLES ON LEFT CARD */
+  /* TRIANGLES ON LEFT CARD */
 
-.yellowFade-cardLeft {
+  .yellowFade-cardLeft {
     display: grid;
     grid-template-columns: 1fr;
     width: 100%;
@@ -853,7 +867,7 @@ cite {
   }
 
   .yellowFade-cardLeft .textContainer {
-    display: contents; 
+    display: contents;
   }
 
   .textContainer > div:first-child {
@@ -869,12 +883,97 @@ cite {
     width: 100%;
     height: 300px;
     object-fit: cover;
-    border-radius: 0; 
+    border-radius: 0;
+  }
+
+  /* ///////// MOBILE: SERVICES PAGE //////////  */
+
+  /* MOBILE: PROJECT LEADERSHIP CARD */
+
+  .yellowCirc-card {
+    margin: 50px 20px;
+    padding: 30px 20px;
+    min-height: auto;
+    width: 80%;
+  }
+
+  .yellowCirc-card::before {
+    top: -90px;
+    left: -300px;
+  }
+
+  .projLeadershipTextContainer {
+    padding: 20px 10px 20px 10px;
+    max-width: 100%;
+  }
+
+  /* MOBILE: PHASE CARDS */
+  .phase-card {
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 20px auto;
+    width: 80%;
+    text-align: left;
+    padding: 0 20px;
+  }
+
+  .phase-card::before {
+    top: -165px;
+    left: -290px;
+  }
+
+  .phaselogoCentered {
+    align-items: flex-start;
+    width: 100%;
+    margin-bottom: 15px;
+    padding-bottom: 40px;
+  }
+
+  .mobileOnlyPadding {
+    padding: 50px 0;
+  }
+
+  /*  MOBILE: YOUR PARTNER IN SUCCESS */
+
+  .shortYellowTriRight-card {
+    margin: 50px 20px;
+    padding: 30px 20px;
+    min-height: auto;
+    width: 80%;
+    align-items: center;
+  }
+
+  .shortYellowTriRight-card::before {
+    top: -240px;
+    right: -250px;
+  }
+
+  .shortYellowTri_TextContainer {
+    padding: 0 0 40px 0;
+    text-align: center;
+  }
+
+  .shortYellowTri_TextContainer h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+  }
+
+  .shortYellowTri_TextContainer p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .shortYellowTriRight-card .blueButton {
+    display: inline-block;
+    width: 100%;
+    padding: 15px 10px;
+    font-size: 0.95rem;
+    box-sizing: border-box;
   }
 
   /* /////// MOBILE: RESOURCES PAGE /////// */
 
-  /* MOBLIE: RESOURCES IMAGE RIGHT CARD */
+  /* MOBILE: RESOURCES IMAGE RIGHT CARD */
   .yellowImgRight-card {
     display: flex;
     flex-direction: column;
@@ -1023,7 +1122,6 @@ cite {
   }
 
   /* MOBILE: TESTIMONIAL CARD */
-
 
   .testimonial-card {
     padding: 70px 30px;
