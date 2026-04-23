@@ -804,6 +804,74 @@ cite {
     margin-left: 0;
   }
 
+  /* ////// MOBILE: PROJECTS PAGE ////// */
+
+  /* TRIANGLES ON RIGHT CARD */
+
+  .yellowFade-cardRight {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100vw;
+    padding: 0;
+    /* margin: 0; */
+    overflow: hidden;
+  }
+
+  .textContainer {
+    display: contents;
+  }
+
+  .textContainer > div:first-child {
+    order: 1;
+    padding: 30px 20px 10px 20px;
+  }
+
+  .yellowFade-cardRight > div:last-child {
+    order: 2;
+  }
+
+  .yellowFade-cardRight img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+  }
+
+  .textContainer p {
+    order: 3;
+    padding: 50px 20px 30px 20px;
+    margin: 0;
+  }
+
+/* TRIANGLES ON LEFT CARD */
+
+.yellowFade-cardLeft {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  .yellowFade-cardLeft .textContainer {
+    display: contents; 
+  }
+
+  .textContainer > div:first-child {
+    order: 1;
+    padding: 30px 20px 10px 20px;
+  }
+
+  .yellowFade-cardLeft > div:first-child {
+    order: 2;
+  }
+
+  .yellowFade-cardLeft img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 0; 
+  }
+
   /* /////// MOBILE: RESOURCES PAGE /////// */
 
   /* MOBLIE: RESOURCES IMAGE RIGHT CARD */
@@ -852,10 +920,9 @@ cite {
     top: 40px;
     left: -300px;
   }
-  
+
   /* MOBILE: RESOURCES IMAGE LEFT CARD */
-  
-  
+
   .yellowImgLeft-card {
     display: flex;
     flex-direction: column;
@@ -870,10 +937,10 @@ cite {
     position: relative;
     isolation: isolate;
   }
- 
+
   .yellowImgLeft-card::before {
     top: 40px;
-    left: -300px;
+    right: -300px;
   }
 
   .text-content-right {
@@ -900,9 +967,6 @@ cite {
     object-fit: cover;
     border-radius: 15px 15px 0 0;
   }
-
-
-
 
   /* /////// MOBILE: ABOUT PAGE //////// */
 
@@ -960,13 +1024,10 @@ cite {
 
   /* MOBILE: TESTIMONIAL CARD */
 
-  .card-wrapper {
-    margin: 0 20px;
-  }
 
   .testimonial-card {
     padding: 70px 30px;
-    margin: 20px 0 40px 0;
+    margin: 20px 20px 40px 20px;
   }
 
   .testimonial-card::before {
