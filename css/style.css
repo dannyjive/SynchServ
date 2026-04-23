@@ -808,14 +808,54 @@ cite {
   }
 
   .bg-triangle {
-    position: fixed;
-    top: 0;
-    right: 0;
     width: 330px;
-    height: 100vh;
-    z-index: -1;
-    pointer-events: none;
-    background: linear-gradient(250deg, #c87934 50%, transparent 50%);
+  }
+
+  /* /////// MOBILE: HOME PAGE /////// */
+
+  h1 {
+    font-size: 30px;
+  }
+
+  .circle {
+    width: 250px;
+    height: 250px;
+    background-color: #f3bd72;
+    border-radius: 50%;
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+    text-align: center;
+    margin: 0;
+  }
+
+  .sluglines {
+    font-size: 20px;
+  }
+
+  .whiteButton {
+    font-size: 1em;
+    padding: 10px 30px 10px 30px;
+    margin: 0 5px;
+  }
+
+  .triangleLeft,
+  .triangleRight {
+    width: 800px;
+    height: 800px;
+  }
+
+  .triangleLeft {
+    top: 95px;
+    left: -410px;
+  }
+
+  .triangleRight {
+    top: 95px;
+    right: -410px;
   }
 
   /* ////// MOBILE: PROJECTS PAGE ////// */
