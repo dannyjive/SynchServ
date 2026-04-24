@@ -1,3 +1,6 @@
+/* TODO: Add alt to images */
+
+
 * {
   /* border: red 1px solid;
   box-sizing: border-box; */
@@ -182,12 +185,13 @@ body {
   position: fixed;
   top: 0;
   right: 0;
-  width: 1030px;
+  width: 60%;
   height: 100vh;
   z-index: -1;
   pointer-events: none;
   background: linear-gradient(250deg, #c87934 50%, transparent 50%);
 }
+
 
 .displayFlexCentered {
   display: flex;
@@ -809,9 +813,10 @@ cite {
 
   .bg-triangle {
     width: 330px;
+    width: 70%;
   }
 
-  body {
+  .paddingForMobile {
     padding-top: 90px; /* Lower content to fit Nav */
   }
 
@@ -867,11 +872,11 @@ cite {
   /* TRIANGLES ON RIGHT CARD */
 
   .yellowFade-cardRight {
+
     display: grid;
     grid-template-columns: 1fr;
     width: 100vw;
     padding: 0;
-    /* margin: 0; */
     overflow: hidden;
   }
 
@@ -890,7 +895,6 @@ cite {
 
   .yellowFade-cardRight img {
     width: 100%;
-    height: 300px;
     object-fit: cover;
   }
 
@@ -925,7 +929,6 @@ cite {
 
   .yellowFade-cardLeft img {
     width: 100%;
-    height: 300px;
     object-fit: cover;
     border-radius: 0;
   }
@@ -1194,8 +1197,9 @@ cite {
     z-index: 1000;
     background: linear-gradient(to bottom, #00626b, #6fa5ac);
   }
-
+  
   .nav-header {
+    border-top: 5px solid #cb7835;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -1259,11 +1263,59 @@ cite {
     transform: translateY(0);
   }
 
-  /* Padding for main content so it doesn't hide under the fixed nav */
-  .content-area {
-    margin-top: 70px;
-    margin-left: 0 !important; /* Override any desktop sidebar margins */
+.triangleLeft,
+  .triangleRight {
+
+    top: 50%;
+    transform: translateY(-37%);
+    
+    width: 800px;
+    height: 800px;
+    position: absolute;
   }
+
+  .triangleLeft {
+    left: -410px; 
+  }
+
+  .triangleRight {
+    right: -410px;
+  }
+
+.content-area {
+  padding-top: 60px; 
+  box-sizing: border-box; 
+display: flex;
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center;    
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Overlay styles */
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* Black with 60% opacity */
+  z-index: 998; /* Sits behind the tray (999) but above content area */
+  
+  /* Hidden state */
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Active state triggered by JS */
+.menu-overlay.is-active {
+  opacity: 1;
+  pointer-events: auto;
+}
 
   /* HAMBURGER MENU */
 
@@ -1328,7 +1380,7 @@ cite {
   }
 }
 /* --- HIDE MOBILE NAV ON DESKTOP --- */
-@media (min-width: 769px) {
+@media (min-width: 993px) {
   .mobile-nav {
     display: none;
   }
