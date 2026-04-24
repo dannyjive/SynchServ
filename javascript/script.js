@@ -1,25 +1,18 @@
-const hamburger = document.getElementById('hamburgerBtn');
-const topTray = document.getElementById('topTray');
-const overlay = document.getElementById('overlay');
+document.addEventListener('DOMContentLoaded', () => {
+  const toggleBtn = document.querySelector('.menu-toggle');
+  const navLinks = document.querySelector('.nav-links');
 
-function toggleMenu() {
-  hamburger.classList.toggle('active');
-  topTray.classList.toggle('open');
-  overlay.classList.toggle('active');
-  
-  // Prevent body scrolling when menu is open
-  if (topTray.classList.contains('open')) {
-    document.body.style.overflow = 'hidden';
-  } else {
-    document.body.style.overflow = '';
+  if (toggleBtn) {
+    toggleBtn.addEventListener('click', () => {
+      // Toggle the tray
+      navLinks.classList.toggle('is-open');
+      
+      // Toggle the hamburger animation
+      toggleBtn.classList.toggle('is-active');
+      
+      // Prevent body scroll when menu is open
+      const isOpen = navLinks.classList.contains('is-open');
+      document.body.style.overflow = isOpen ? 'hidden' : 'auto';
+    });
   }
-}
-
-hamburger.addEventListener('click', toggleMenu);
-overlay.addEventListener('click', toggleMenu);
-
-// Close menu if a link is clicked
-const links = document.querySelectorAll('.top-tray a');
-links.forEach(link => {
-  link.addEventListener('click', toggleMenu);
 });

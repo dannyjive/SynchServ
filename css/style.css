@@ -811,6 +811,10 @@ cite {
     width: 330px;
   }
 
+  body {
+    padding-top: 90px; /* Lower content to fit Nav */
+  }
+
   /* /////// MOBILE: HOME PAGE /////// */
 
   h1 {
@@ -1173,5 +1177,159 @@ cite {
     color: rgba(255, 255, 255, 0.2);
     top: -340px;
     left: -150px;
+  }
+
+  /* //////////// MOBILE NAV ////////// */
+
+  .logo {
+    height: 50px;
+  }
+
+  .mobile-nav {
+    display: block;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background: linear-gradient(to bottom, #00626b, #6fa5ac);
+  }
+
+  .nav-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background: transparent;
+    position: relative;
+    z-index: 1001;
+  }
+
+  /* THE TRAY */
+  .nav-links {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+    width: 100%;
+
+
+    padding-top: 70px;
+
+    margin: 0;
+    list-style: none;
+
+
+    background: linear-gradient(to bottom, #00626b, #6fa5ac);
+
+ 
+    transform: translateY(-100%);
+    transition: transform 0.4s ease-in-out;
+    z-index: 999;
+  }
+
+  .nav-links li {
+    text-align: center;
+  }
+
+  .nav-links.is-open {
+    transform: translateY(0);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(0);
+  }
+
+  #mobileContactInfo {
+    width: 100%;
+    text-align: center;
+    padding: 2rem 0;
+  }
+
+  #mobileContactInfo p {
+    font-size: 1em;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+
+  #mobileContactInfo a {
+    display: inline-block;
+    text-align: center;
+  }
+
+  .nav-links.is-open {
+    transform: translateY(0);
+  }
+
+  /* Padding for main content so it doesn't hide under the fixed nav */
+  .content-area {
+    margin-top: 70px;
+    margin-left: 0 !important; /* Override any desktop sidebar margins */
+  }
+
+  /* HAMBURGER MENU */
+
+  .menu-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1002;
+  }
+
+  .hamburger {
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 3px;
+    background-color: white; /* Color of mid bar */
+    transition: background 0.2s ease-in-out;
+  }
+
+  .hamburger::before,
+  .hamburger::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: white; /* Color of top/bottom bars */
+    transition:
+      transform 0.3s ease-in-out,
+      top 0.3s ease-in-out;
+  }
+
+  /* Position the top and bottom bars */
+  .hamburger::before {
+    top: -8px;
+  }
+  .hamburger::after {
+    top: 8px;
+  }
+
+  /* --- TRANSFORM TO X --- */
+
+  /* Hide the middle bar */
+  .menu-toggle.is-active .hamburger {
+    background-color: transparent;
+  }
+
+  /* Rotate top bar to 45 degrees */
+  .menu-toggle.is-active .hamburger::before {
+    top: 0;
+    transform: rotate(45deg);
+  }
+
+  /* Rotate bottom bar to -45 degrees */
+  .menu-toggle.is-active .hamburger::after {
+    top: 0;
+    transform: rotate(-45deg);
+  }
+}
+/* --- HIDE MOBILE NAV ON DESKTOP --- */
+@media (min-width: 769px) {
+  .mobile-nav {
+    display: none;
   }
 }
