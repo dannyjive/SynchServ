@@ -312,6 +312,22 @@ main.content-area {
 
 /* ///////////// SERVICES PAGE ////////// */
 
+/* GSAP TEXT REVEAL FOR PHASE CARDS */
+
+/* .reveal-text {
+  opacity: 0;
+  transform: translateY(40px);
+} 
+
+.line-mask {
+  overflow: hidden;
+}
+
+.line {
+  transform: translateY(100%);
+}*/
+
+
 /* PROJECT LEADERSHIP & SERVICES CARD*/
 
 .yellowCirc-card {
