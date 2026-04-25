@@ -1,47 +1,61 @@
 /* TODO: Photoshop weird triangle on mobile portrait image. */
 
-
-* {
+*, *::before, *::after {
   /* border: red 1px solid;
-  box-sizing: border-box; */
+  box-sizing: border-box;*/ 
   margin: 0;
   padding: 0;
+  
 }
 
 /* COLORS */
-.lightestOrange {
-  color: #efd2a7;
-  /* rgb(239 210 167) */
+
+:root {
+  --color-teal: #00626b;
+  /* rgba(0, 98, 107, 1) */
+
+  --color-light-teal: #6fa5ac;
+  /* rgba(111, 165, 172, 1) */
+
+  --color-orange: #f3bd72;
+  /* rgba(243, 189, 114, 1)  */
+
+  --color-light-orange: #efd2a7;
+  /* rgb(239, 210, 167, 1) */
+
+  --color-dark-orange: #cb7835;
+  /* rgba(203, 120, 53, 1),*/
+
+  --color-dark-blue: #122533;
+  /* rgba(18, 37, 51, 1) */
+
+  --color-off-white: #fff7f0;
+  /* rgba(255, 247, 240, 1) */
+
+  /* Spacing and Radii */
+  --card-radius: 15px;
+    /* x-offset | y-offset | blur | color */
+  --shadow: 0 10px 20px rgba(42, 42, 81, 0.2);
 }
 
 .lightOrange {
-  color: #f3bd72;
-  /* rgba(243, 189, 114, 1)  */
+  color: var(--color-light-orange);
+}
+
+.orange {
+  color: var(--color-orange);
 }
 
 .darkOrange {
-  color: #cb7835;
-  /* rgba(203, 120, 53, 1),*/
+  color: var(--color-dark-orange);
 }
 
 .teal {
-  color: #00626b;
-  /* rgba(0, 98, 107, 1) */
-}
-
-.lightTeal {
-  color: #6fa5ac;
-  /* rgba(111, 165, 172, 1) */
+  color: var(--color-teal);
 }
 
 .darkBlue {
-  color: #122533;
-  /* rgba(18, 37, 51, 1) */
-}
-
-.offWhite {
-  color: #fff7f0;
-  /* rgba(255, 247, 240, 1) */
+  color: var(--color-dark-blue);
 }
 
 /* HEADERS & PARA*/
@@ -83,9 +97,9 @@ h4 {
 
 .blueButton {
   display: inline-block;
-  background-color: #00626b;
-  color: #fff7f0;
-  border-radius: 15px;
+  background-color: var(--color-teal);
+  color: var(--color-off-white);
+  border-radius: var(--card-radius);
   padding: 20px;
   margin: 0 10px;
   font-family: "Archivo Narrow";
@@ -96,14 +110,14 @@ h4 {
 }
 
 .blueButton:hover {
-  background-color: #122533;
+  background-color: var(--color-dark-blue);
 }
 
 .whiteButton {
   display: inline-block;
-  color: #00626b;
-  background-color: #fff7f0;
-  border-radius: 15px;
+  color: var(--color-teal);
+  background-color: var(--color-off-white);
+  border-radius: var(--card-radius);
   padding: 20px;
   margin: 0 10px;
   font-family: "Archivo Narrow";
@@ -115,8 +129,8 @@ h4 {
 }
 
 .whiteButton:hover {
-  background-color: #cb7835;
-  color: #fff7f0;
+  background-color: var(--color-dark-orange);
+  color: var(--color-off-white);
 }
 
 /* BODY */
@@ -126,9 +140,9 @@ body {
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
-  background-color: #fff7f0;
+  background-color: var(--color-off-white);
   display: flex;
-  color: #fff7f0;
+  color: var(--color-off-white);
   margin: 0;
   padding: 0;
 }
@@ -140,7 +154,6 @@ body {
   position: relative;
   overflow: hidden;
   height: 100vh;
-  /* padding: 40px; */
 }
 
 .triangle {
@@ -149,15 +162,6 @@ body {
   width: 0;
   height: 0;
 }
-
-/* Possible alt for shrinking BG triangles on small screen. Need to test to see if we really like this or not.
-
-.triangleLeft, .triangleRight {
-  width: 50vw; 
-  height: 50vw;
-  max-width: 900px;
-  max-height: 900px;
-} */
 
 .triangleLeft {
   width: 900px;
@@ -192,7 +196,6 @@ body {
   background: linear-gradient(250deg, #c87934 50%, transparent 50%);
 }
 
-
 .displayFlexCentered {
   display: flex;
   flex-direction: column;
@@ -204,11 +207,32 @@ body {
   display: flex;
 }
 
+/* GSAP for Home Page */
+
+.phrase-container {
+  display: grid;
+  place-items: center;
+  text-align: center;
+  max-width: 550px;
+  margin: 0 auto;
+  min-height: 190px;
+  overflow: visible;
+  transform: translateY(-15px);
+}
+
+.phrase {
+  grid-area: 1 / 1;
+  opacity: 0;
+  visibility: hidden;
+  margin: 0;
+  color: var(--color-teal);
+}
+
 /* SIDEBAR */
 
 #sidebar {
-  background: linear-gradient(to right, #00626b, #6fa5ac);
-  border-left: 10px solid #cb7835;
+  background: linear-gradient(to right, var(--color-teal), var(--color-light-teal));
+  border-left: 10px solid var(--color-dark-orange);
   position: fixed;
   top: 0;
   left: 0;
@@ -234,7 +258,7 @@ nav {
 }
 
 nav ul li a:hover {
-  color: #efd2a7;
+  color: var(--color-light-orange);
 }
 
 ul {
@@ -249,7 +273,7 @@ li {
 
 a {
   text-decoration: none;
-  color: #fff7f0;
+  color: var(--color-off-white);
 }
 
 #locationContactText {
@@ -294,7 +318,7 @@ main.content-area {
 .circle {
   width: 550px;
   height: 550px;
-  background-color: #f3bd72;
+  background-color: var(--color-orange);
   border-radius: 50%;
   padding: 60px;
   display: flex;
@@ -306,27 +330,11 @@ main.content-area {
   margin: 0;
 }
 
-.sluglines {
+.slugline {
   font-size: 30px;
 }
 
 /* ///////////// SERVICES PAGE ////////// */
-
-/* GSAP TEXT REVEAL FOR PHASE CARDS */
-
-/* .reveal-text {
-  opacity: 0;
-  transform: translateY(40px);
-} 
-
-.line-mask {
-  overflow: hidden;
-}
-
-.line {
-  transform: translateY(100%);
-}*/
-
 
 /* PROJECT LEADERSHIP & SERVICES CARD*/
 
@@ -340,15 +348,15 @@ main.content-area {
   width: 100%;
   max-width: 980px;
   min-height: 260px;
-  border-radius: 15px;
-  background: #f3bd72;
+  border-radius: var(--card-radius);
+  background: var(--color-orange);
   overflow: hidden;
   z-index: 1;
   text-align: center;
 
   padding: 50px;
   margin: 80px;
-  box-shadow: 0 10px 20px rgba(42, 42, 81, 0.2);
+  box-shadow: var(--shadow);
 }
 
 .yellowCirc-card::before {
@@ -411,7 +419,7 @@ main.content-area {
 
 .triangleBullets::before {
   content: "▶ ";
-  color: #fff7f0;
+  color: var(--color-off-white);
   display: inline-block;
   width: 1em;
   margin-left: -1.3em;
@@ -422,14 +430,14 @@ main.content-area {
   align-items: center;
   position: relative;
   max-width: 980px;
-  border-radius: 15px;
-  background: #00626b;
+  border-radius: var(--card-radius);
+  background: var(--color-teal);
   overflow: hidden;
   z-index: 1;
   text-align: left;
   padding: 0 50px;
   margin: 50px;
-  box-shadow: 0 10px 20px rgba(42, 42, 81, 0.2);
+  box-shadow: var(--shadow);
 }
 
 .phase-card::before {
@@ -457,14 +465,14 @@ main.content-area {
   position: relative;
   max-width: 724px;
 
-  border-radius: 15px;
-  background: #f3bd72;
+  border-radius: var(--card-radius);
+  background: var(--color-orange);
   overflow: hidden;
   z-index: 1;
   text-align: center;
   padding: 50px;
   margin: 50px;
-  box-shadow: 0 10px 20px rgba(42, 42, 81, 0.2);
+  box-shadow:  var(--shadow);
 }
 
 .shortYellowTriRight-card::before {
@@ -540,7 +548,7 @@ blockquote {
 
 .testimonial-card {
   position: relative;
-  border-radius: 15px;
+  border-radius: var(--card-radius);
   background: linear-gradient(
     0deg,
     rgba(0, 98, 107, 1),
@@ -551,8 +559,8 @@ blockquote {
   text-align: center;
   padding: 50px 100px;
   margin: 50px 0;
-  /* x-offset | y-offset | blur | color */
-  box-shadow: 0 10px 20px rgba(42, 42, 81, 0.2);
+
+  box-shadow:  var(--shadow);
 }
 
 .testimonial-card::before {
@@ -584,12 +592,12 @@ cite {
   align-items: stretch;
   max-width: 980px;
   min-height: 364px;
-  background: #f3bd72;
-  border-radius: 15px;
+  background: var(--color-orange);
+  border-radius: var(--card-radius);
   overflow: hidden;
   z-index: 1;
   margin: 50px auto;
-  box-shadow: 0 10px 20px rgba(42, 42, 81, 0.2);
+  box-shadow: var(--shadow);
 }
 
 .yellowImgRight-card::before {
@@ -644,12 +652,12 @@ cite {
   align-items: stretch;
   max-width: 980px;
   min-height: 364px;
-  background: #f3bd72;
-  border-radius: 15px;
+  background: var(--color-orange);
+  border-radius: var(--card-radius);
   overflow: hidden;
   z-index: 1;
   margin: 50px auto;
-  box-shadow: 0 10px 20px rgba(42, 42, 81, 0.2);
+  box-shadow: var(--shadow);
 }
 
 .yellowImgLeft-card::before {
@@ -707,14 +715,14 @@ cite {
   justify-content: center;
   position: relative;
   max-width: 724px;
-  border-radius: 15px;
-  background: #f3bd72;
+  border-radius: var(--card-radius);
+  background: var(--color-orange);
   overflow: hidden;
   z-index: 1;
   text-align: center;
   padding: 30px 50px 50px 50px;
   margin: 50px 0;
-  box-shadow: 0 10px 20px rgba(42, 42, 81, 0.2);
+  box-shadow: var(--shadow);
 }
 
 .shortYellowTriLeft-card::before {
@@ -741,7 +749,7 @@ cite {
   align-items: center;
   max-width: 980px;
   min-height: 500px;
-  border-radius: 15px;
+  border-radius: var(--card-radius);
   background: linear-gradient(
     180deg,
     rgba(0, 98, 107, 1),
@@ -750,7 +758,7 @@ cite {
   overflow: hidden;
   padding: 60px;
   margin: 50px auto;
-  box-shadow: 0 10px 20px rgba(42, 42, 81, 0.2);
+  box-shadow: var(--shadow);
 }
 
 .about-content {
@@ -781,14 +789,14 @@ cite {
   justify-content: center;
   position: relative;
   max-width: 731px;
-  border-radius: 15px;
-  background: #f3bd72;
+  border-radius: var(--card-radius);
+  background: var(--color-orange);
   overflow: hidden;
   z-index: 1;
   text-align: center;
   padding: 50px;
   margin: 50px;
-  box-shadow: 0 10px 20px rgba(42, 42, 81, 0.2);
+  box-shadow:var(--shadow);
 }
 
 .yellowCircRight-card::before {
@@ -833,7 +841,7 @@ cite {
   }
 
   .paddingForMobile {
-    padding-top: 90px; /* Lower content to fit Nav */
+    padding-top: 90px;
   }
 
   /* /////// MOBILE: HOME PAGE /////// */
@@ -845,7 +853,7 @@ cite {
   .circle {
     width: 250px;
     height: 250px;
-    background-color: #f3bd72;
+    background-color: var(--color-orange);
     border-radius: 50%;
     padding: 60px;
     display: flex;
@@ -857,14 +865,19 @@ cite {
     margin: 0;
   }
 
-  .sluglines {
+  .slugline {
     font-size: 20px;
+  }
+
+  .phrase-container {
+    max-width: 500px;
+    min-height: 100px;
   }
 
   .whiteButton {
     font-size: 1em;
     padding: 10px 30px 10px 30px;
-    margin: 0 5px;
+    margin: 20px 5px 0 5px;
   }
 
   .triangleLeft,
@@ -888,7 +901,6 @@ cite {
   /* TRIANGLES ON RIGHT CARD */
 
   .yellowFade-cardRight {
-
     display: grid;
     grid-template-columns: 1fr;
     width: 100vw;
@@ -1045,7 +1057,7 @@ cite {
     padding: 0;
     margin: 0;
     margin: 50px 20px;
-    border-radius: 15px;
+    border-radius: var(--card-radius);
     align-items: center;
     overflow: hidden;
     position: relative;
@@ -1093,7 +1105,7 @@ cite {
     padding: 0;
     margin: 0;
     margin: 50px 20px;
-    border-radius: 15px;
+    border-radius: var(--card-radius);
     align-items: center;
     overflow: hidden;
     position: relative;
@@ -1211,11 +1223,11 @@ cite {
     top: 0;
     left: 0;
     z-index: 1000;
-    background: linear-gradient(to bottom, #00626b, #6fa5ac);
+    background: linear-gradient(to bottom, var(--color-teal), var(--color-light-teal));
   }
-  
+
   .nav-header {
-    border-top: 5px solid #cb7835;
+    border-top: 5px solid var(--color-dark-orange);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -1233,16 +1245,13 @@ cite {
     left: 0;
     width: 100%;
 
-
     padding-top: 70px;
 
     margin: 0;
     list-style: none;
 
+    background: linear-gradient(to bottom, var(--color-teal), var(--color-light-teal));
 
-    background: linear-gradient(to bottom, #00626b, #6fa5ac);
-
- 
     transform: translateY(-100%);
     transition: transform 0.4s ease-in-out;
     z-index: 999;
@@ -1254,7 +1263,7 @@ cite {
 
   .nav-links.is-open {
     transform: translateY(0);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: var(--shadow);
     transform: translateY(0);
   }
 
@@ -1279,59 +1288,58 @@ cite {
     transform: translateY(0);
   }
 
-.triangleLeft,
+  .triangleLeft,
   .triangleRight {
-
     top: 50%;
     transform: translateY(-37%);
-    
+
     width: 800px;
     height: 800px;
     position: absolute;
   }
 
   .triangleLeft {
-    left: -410px; 
+    left: -410px;
   }
 
   .triangleRight {
     right: -410px;
   }
 
-.content-area {
-  padding-top: 60px; 
-  box-sizing: border-box; 
-display: flex;
-  flex-direction: column; 
-  justify-content: center; 
-  align-items: center;    
-  height: 100vh;
-  width: 100%;
-  position: relative;
-  overflow: hidden;
-}
+  .content-area {
+    padding-top: 60px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+  }
 
-/* Overlay styles */
-.menu-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.6); /* Black with 60% opacity */
-  z-index: 998; /* Sits behind the tray (999) but above content area */
-  
-  /* Hidden state */
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s ease-in-out;
-}
+  /* Overlay styles */
+  .menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 998;
 
-/* Active state triggered by JS */
-.menu-overlay.is-active {
-  opacity: 1;
-  pointer-events: auto;
-}
+    /* Hidden state */
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  /* Active state triggered by JS */
+  .menu-overlay.is-active {
+    opacity: 1;
+    pointer-events: auto;
+  }
 
   /* HAMBURGER MENU */
 

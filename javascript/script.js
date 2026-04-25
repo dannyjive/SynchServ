@@ -5,17 +5,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (toggleBtn) {
     toggleBtn.addEventListener("click", () => {
-      // Toggle the classes
       navLinks.classList.toggle("is-open");
       toggleBtn.classList.toggle("is-active");
       overlay.classList.toggle("is-active"); // Darkens the screen
 
-      // Prevent body scroll
       const isOpen = navLinks.classList.contains("is-open");
       document.body.style.overflow = isOpen ? "hidden" : "auto";
     });
 
-    // OPTIONAL: Close the menu if the user clicks on the dark area
+    // Close the menu if the user clicks on the dark area
     overlay.addEventListener("click", () => {
       navLinks.classList.remove("is-open");
       toggleBtn.classList.remove("is-active");
@@ -48,4 +46,32 @@ gsap.utils.toArray(".card").forEach((card) => {
       toggleActions: "play none none none",
     },
   });
+});
+
+// GSAP for Home page
+
+document.addEventListener("DOMContentLoaded", () => {
+  const phrases = document.querySelectorAll(".phrase");
+
+  if (phrases.length > 0) {
+    const tl = gsap.timeline({ repeat: -1 });
+
+    gsap.set(phrases, { visibility: "visible" });
+
+    phrases.forEach((phrase) => {
+      tl.to(phrase, {
+        opacity: 1,
+        y: 0,
+        duration: 0.8,
+        ease: "power2.out"
+      })
+      .to(phrase, {
+        opacity: 0,
+        y: -20,
+        duration: 0.6,
+        ease: "power2.in",
+        delay: 1.5 // Time visible
+      });
+    });
+  }
 });

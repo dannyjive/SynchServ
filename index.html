@@ -19,70 +19,68 @@
 
   <!-- MOBILE TOP DOWN TRAY -->
 
-<nav class="mobile-nav">
-  <div class="nav-header">
-    <div >
-      <a href="index.html">
-        <img class="logo" src="img/SynchronicLogo_WhiteLogo.webp" alt="Synchronic Services logo" />
-      </a>
+  <nav class="mobile-nav">
+    <div class="nav-header">
+      <div>
+        <a href="index.html">
+          <img class="logo" src="img/SynchronicLogo_WhiteLogo.webp" alt="Synchronic Services logo" />
+        </a>
+      </div>
+      <button class="menu-toggle" aria-label="Toggle menu">
+        <span class="hamburger"></span>
+      </button>
     </div>
-    <button class="menu-toggle" aria-label="Toggle menu">
-      <span class="hamburger"></span>
-    </button>
-  </div>
 
-  <div class="nav-links">
-    <ul>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="resources.html">Resources</a></li>
-      <li><a href="about.html">About</a></li>
-    </ul>
-
-    <div id="mobileContactInfo">
-      <p><span class="lightOrange sizeTwentyBold">Location</span> <br/>Seattle, WA & <br />the Greater Puget Sound Area</p>
-      <p><span class="lightOrange sizeTwentyBold">Contact</span><br/>
-        <a class="underlineMe" href="tel:8142445199">(814) 244 - 5199</a> <br />
-        <a href="mailto:shannon@synchronicservices.com" class="underlineMe">shannon@synchronicservices.com</a>
-      </p>
-    </div>
-  </div>
-</nav>
-
-
-
-
-
-
-
-<!-- ///////// DESKTOP SIDEBAR /////////// -->
-  <header id="sidebar">
-  
-  <!--NAV-->
-  <nav>
-    <div id="navText">
-      <a href="index.html">
-        <img src="img/SynchronicLogo_WhiteLogo.webp" alt="Synchronic Services logo" />
-      </a>
+    <div class="nav-links">
       <ul>
         <li><a href="services.html">Services</a></li>
         <li><a href="projects.html">Projects</a></li>
         <li><a href="resources.html">Resources</a></li>
         <li><a href="about.html">About</a></li>
       </ul>
+
+      <div id="mobileContactInfo">
+        <p><span class="orange sizeTwentyBold">Location</span> <br />Seattle, WA & <br />the Greater Puget Sound
+          Area</p>
+        <p><span class="orange sizeTwentyBold">Contact</span><br />
+          <a class="underlineMe" href="tel:8142445199">(814) 244 - 5199</a> <br />
+          <a href="mailto:shannon@synchronicservices.com" class="underlineMe">shannon@synchronicservices.com</a>
+        </p>
+      </div>
     </div>
-  </nav> 
+  </nav>
 
-<!-- Location and Contact -->
-  <div id="locationContactText">
-    <p><span class="lightOrange sizeTwentyBold">Location</span> <br/>Seattle, WA & <br />the Greater Puget Sound Area</p>
-    <p><span class="lightOrange  sizeTwentyBold">Contact</span><br/><a class="underlineMe" href="tel:8142445199">(814) 244 - 5199</a> <br /><a href="mailto:shannon@synchronicservices.com" class="underlineMe">shannon@synchronicservices.com</a></p>
-  </div>
-</header>
+  <!-- ///////// DESKTOP SIDEBAR /////////// -->
+  <header id="sidebar">
+
+    <!--NAV-->
+    <nav>
+      <div id="navText">
+        <a href="index.html">
+          <img src="img/SynchronicLogo_WhiteLogo.webp" alt="Synchronic Services logo" />
+        </a>
+        <ul>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Location and Contact -->
+    <div id="locationContactText">
+      <p><span class="orange sizeTwentyBold">Location</span> <br />Seattle, WA & <br />the Greater Puget Sound Area
+      </p>
+      <p><span class="orange  sizeTwentyBold">Contact</span><br /><a class="underlineMe"
+          href="tel:8142445199">(814) 244 - 5199</a> <br /><a href="mailto:shannon@synchronicservices.com"
+          class="underlineMe">shannon@synchronicservices.com</a></p>
+    </div>
+  </header>
 
 
 
-<!-- ////////// MAIN ////////// -->
+  <!-- ////////// MAIN ////////// -->
   <main class="content-area">
 
     <!-- Background Triangles -->
@@ -92,16 +90,33 @@
     <!-- Center Circle -->
     <div class="circle">
       <h1 class="darkBlue">SYNCHRONIC <br />SERVICES</h1>
-      <p class="teal sluglines">
-        expertly represents the unique interests of the nonprofit client
-        throughout the construction and design process
-      </p>
+      <div class="phrase-container">
+        <p class="phrase teal slugline">Expertly represents the unique interests of the nonprofit client throughout the construction
+          and design process.</p>
+        <p class="phrase teal slugline">Leverages a multidisciplinary foundation in architecture, construction, and nonprofit
+          leadership to bridge communication gaps.</p>
+        <p class="phrase teal slugline">Provides expert risk mitigation and budget transparency to protect nonprofit resources.
+        </p>
+        <p class="phrase teal slugline">Believes clients should feel supported, empowered, and confident throughout the process.
+        </p>
+      </div>
       <a href="mailto:shannon@synchronicservices.com" class="whiteButton">Let's Connect</a>
     </div>
 
   </main>
+
+  <!-- Darkens mobile website when tray is open  -->
   <div class="menu-overlay"></div>
-  <script src="../javascript/script.js" defer></script>
+
+  <!-- GSAP animation -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <!-- Javascript -->
+  <script src="./javascript/script.js"></script>
+
+
 </body>
 
 </html>
