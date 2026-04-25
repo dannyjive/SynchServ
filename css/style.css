@@ -1,6 +1,4 @@
-/* TODO: Photoshop weird triangle on mobile portrait image. */
-
-*, *::before, *::after {
+* {
   /* border: red 1px solid;
   box-sizing: border-box;*/ 
   margin: 0;
