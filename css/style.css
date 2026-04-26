@@ -213,7 +213,7 @@ body {
   text-align: center;
   max-width: 550px;
   margin: 0 auto;
-  min-height: 190px;
+  min-height: 90px;
   overflow: visible;
   transform: translateY(-15px);
 }
@@ -318,7 +318,7 @@ main.content-area {
   height: 550px;
   background-color: var(--color-orange);
   border-radius: 50%;
-  padding: 60px;
+  padding: 30px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -344,7 +344,7 @@ main.content-area {
   position: relative;
 
   width: 100%;
-  max-width: 980px;
+  max-width: 724px;
   min-height: 260px;
   border-radius: var(--card-radius);
   background: var(--color-orange);
@@ -540,7 +540,8 @@ main.content-area {
 }
 
 blockquote {
-  font-size: 24px;
+  font-size: 1em;
+  font-weight: 400;
   max-width: 670px;
 }
 
@@ -577,7 +578,7 @@ cite {
   display: block;
   text-align: right;
   margin-top: 30px;
-  font-size: 20px;
+  font-size: 1em;
 }
 
 /* /////// RESOURCE PAGE /////// */

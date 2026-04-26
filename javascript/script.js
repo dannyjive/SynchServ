@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", () => {
         y: -20,
         duration: 0.6,
         ease: "power2.in",
-        delay: 1.5 // Time visible
+        delay: 2 // Time visible
       });
     });
   }
