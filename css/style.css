@@ -145,6 +145,10 @@ body {
   padding: 0;
 }
 
+.logo{
+  width: 15vw;
+}
+
 /* //// HOME PAGE //// */
 
 /* BG TRIANGLES */
@@ -182,37 +186,6 @@ body {
   background-position: right center;
   right: -280px;
 }
-
-
-
-/* .triangle {
-  position: absolute;
-  z-index: -1;
-  width: 0;
-  height: 0;
-} */
-
-
-
-/* .triangleLeft {
-  width: 900px;
-  height: 900px;
-  background-image: url("../img/BgTri_Left.webp");
-  background-size: contain;
-  background-repeat: no-repeat;
-  top: 85px;
-  left: -100px;
-}
-
-.triangleRight {
-  width: 900px;
-  height: 900px;
-  background-image: url("../img/BgTri_Right.webp");
-  background-size: contain;
-  background-repeat: no-repeat;
-  top: 85px;
-  right: -100px;
-}  */
 
 /* BG ORANGE TRIANGLE FOR OTHER PAGES */
 
@@ -535,6 +508,12 @@ main.content-area {
   margin: 50px 0 50px 0;
   background: linear-gradient(180deg, rgba(243, 189, 114, 1), rgb(239 210 167));
   overflow: hidden;
+}
+
+.image-wrapper {
+  /* Adjust image size here */
+  flex: 0 0 55%; 
+  max-width: 55%; 
 }
 
 .yellowFade-cardRight img,
