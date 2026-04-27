@@ -1,9 +1,8 @@
 * {
   /* border: red 1px solid;
-  box-sizing: border-box;*/ 
+  box-sizing: border-box;*/
   margin: 0;
   padding: 0;
-  
 }
 
 /* COLORS */
@@ -32,7 +31,7 @@
 
   /* Spacing and Radii */
   --card-radius: 15px;
-    /* x-offset | y-offset | blur | color */
+  /* x-offset | y-offset | blur | color */
   --shadow: 0 10px 20px rgba(42, 42, 81, 0.2);
 }
 
@@ -145,7 +144,7 @@ body {
   padding: 0;
 }
 
-.logo{
+.logo {
   max-width: 200px;
 }
 
@@ -163,12 +162,61 @@ body {
   overflow: hidden;
 }
 
-.triangle {
+/* Container to hold both triangles and create the gap */
+.triangle-container {
   position: absolute;
   top: 50%;
-  transform: translateY(-50%); 
-  width: 90%; 
-  min-height: 90%; 
+  left: 50%;
+  transform: translate(-50%, -50%); /* Perfectly center the unit */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* width: 100%;
+  height: 100%; */
+width: 100vw; 
+  height: 100vh;
+overflow: visible;
+
+  z-index: -1;
+  pointer-events: none;
+}
+
+.triangle {
+
+  position: relative; 
+  top: auto;
+  left: auto;
+  right: auto;
+  transform: none;
+  flex-shrink: 0;
+  /* width: 65%;
+  height: 90%; */
+
+  width: 900px; 
+  height: 900px;
+
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.triangleLeft {
+  background-image: url("../img/BgTri_Left.webp");
+  background-position: right center;
+  scroll-margin-right: -100px;
+}
+
+.triangleRight {
+  background-image: url("../img/BgTri_Right.webp");
+  background-position: left center;
+  margin-left: -100px;
+}
+
+/* .triangle {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 90%;
+  min-height: 90%;
   z-index: -1;
   pointer-events: none;
   background-size: contain;
@@ -185,9 +233,8 @@ body {
 .triangleRight {
   background-image: url("../img/BgTri_Right.webp");
   background-position: right center;
-  /* right: -280px; */
   right: -20%;
-}
+} */
 
 /* BG ORANGE TRIANGLE FOR OTHER PAGES */
 
@@ -237,7 +284,11 @@ body {
 /* SIDEBAR */
 
 #sidebar {
-  background: linear-gradient(to right, var(--color-teal), var(--color-light-teal));
+  background: linear-gradient(
+    to right,
+    var(--color-teal),
+    var(--color-light-teal)
+  );
   border-left: 10px solid var(--color-dark-orange);
   position: fixed;
   top: 0;
@@ -478,7 +529,7 @@ main.content-area {
   text-align: center;
   padding: 50px;
   margin: 50px;
-  box-shadow:  var(--shadow);
+  box-shadow: var(--shadow);
 }
 
 .shortYellowTriRight-card::before {
@@ -514,8 +565,8 @@ main.content-area {
 
 .image-wrapper {
   /* Adjust image size here */
-  flex: 0 0 55%; 
-  max-width: 55%; 
+  flex: 0 0 55%;
+  max-width: 55%;
 }
 
 .yellowFade-cardRight img,
@@ -573,7 +624,7 @@ blockquote {
   padding: 50px 100px;
   margin: 50px 0;
 
-  box-shadow:  var(--shadow);
+  box-shadow: var(--shadow);
 }
 
 .testimonial-card::before {
@@ -809,7 +860,7 @@ cite {
   text-align: center;
   padding: 50px;
   margin: 50px;
-  box-shadow:var(--shadow);
+  box-shadow: var(--shadow);
 }
 
 .yellowCircRight-card::before {
@@ -838,7 +889,7 @@ cite {
 
 /* ----------- MOBILE STYLES ---------------- */
 
-@media (max-width: 1521px) {
+@media (max-width: 1280px) {
   #sidebar {
     display: none;
   }
@@ -893,6 +944,13 @@ cite {
     margin: 20px 5px 0 5px;
   }
 
+  .triangle-container {
+    gap: 200px; /* Smaller gap for mobile */
+  }
+  .triangle {
+    width: 80%; /* Larger relative size for smaller screens */
+  }
+
   .triangleLeft,
   .triangleRight {
     width: 800px;
@@ -902,11 +960,13 @@ cite {
   .triangleLeft {
     top: 95px;
     left: -410px;
+
   }
 
   .triangleRight {
     top: 95px;
     right: -410px;
+
   }
 
   /* ////// MOBILE: PROJECTS PAGE ////// */
@@ -1236,7 +1296,11 @@ cite {
     top: 0;
     left: 0;
     z-index: 1000;
-    background: linear-gradient(to bottom, var(--color-teal), var(--color-light-teal));
+    background: linear-gradient(
+      to bottom,
+      var(--color-teal),
+      var(--color-light-teal)
+    );
   }
 
   .nav-header {
@@ -1263,7 +1327,11 @@ cite {
     margin: 0;
     list-style: none;
 
-    background: linear-gradient(to bottom, var(--color-teal), var(--color-light-teal));
+    background: linear-gradient(
+      to bottom,
+      var(--color-teal),
+      var(--color-light-teal)
+    );
 
     transform: translateY(-100%);
     transition: transform 0.4s ease-in-out;
@@ -1304,7 +1372,7 @@ cite {
   .triangleLeft,
   .triangleRight {
     top: 50%;
-    transform: translateY(-37%);
+    transform: translateY(-50%);
 
     width: 800px;
     height: 800px;
@@ -1330,6 +1398,7 @@ cite {
     width: 100%;
     position: relative;
     overflow: hidden;
+    
   }
 
   /* Overlay styles */
@@ -1417,7 +1486,7 @@ cite {
   }
 }
 /* --- HIDE MOBILE NAV ON DESKTOP --- */
-@media (min-width: 1521px) {
+@media (min-width: 1280px) {
   .mobile-nav {
     display: none;
   }
