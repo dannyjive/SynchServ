@@ -167,34 +167,27 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%); /* Perfectly center the unit */
+  transform: translate(-50%, -50%);
   display: flex;
   justify-content: center;
   align-items: center;
-  /* width: 100%;
-  height: 100%; */
-width: 100vw; 
+  width: 100vw;
   height: 100vh;
-overflow: visible;
+  overflow: visible;
 
   z-index: -1;
   pointer-events: none;
 }
 
 .triangle {
-
-  position: relative; 
+  position: relative;
   top: auto;
   left: auto;
   right: auto;
   transform: none;
   flex-shrink: 0;
-  /* width: 65%;
-  height: 90%; */
-
-  width: 900px; 
+  width: 900px;
   height: 900px;
-
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -202,7 +195,7 @@ overflow: visible;
 .triangleLeft {
   background-image: url("../img/BgTri_Left.webp");
   background-position: right center;
-  scroll-margin-right: -100px;
+  margin-right: -100px;
 }
 
 .triangleRight {
@@ -889,7 +882,7 @@ cite {
 
 /* ----------- MOBILE STYLES ---------------- */
 
-@media (max-width: 1280px) {
+@media (max-width: 1523px) {
   #sidebar {
     display: none;
   }
@@ -944,29 +937,16 @@ cite {
     margin: 20px 5px 0 5px;
   }
 
-  .triangle-container {
-    gap: 200px; /* Smaller gap for mobile */
-  }
-  .triangle {
-    width: 80%; /* Larger relative size for smaller screens */
-  }
-
-  .triangleLeft,
-  .triangleRight {
-    width: 800px;
-    height: 800px;
-  }
+  /* Mobile Triangles */
 
   .triangleLeft {
-    top: 95px;
-    left: -410px;
-
+    background-position: right center;
+    margin-right: -200px;
   }
 
   .triangleRight {
-    top: 95px;
-    right: -410px;
-
+    background-position: left center;
+    margin-left: -200px;
   }
 
   /* ////// MOBILE: PROJECTS PAGE ////// */
@@ -1369,25 +1349,7 @@ cite {
     transform: translateY(0);
   }
 
-  .triangleLeft,
-  .triangleRight {
-    top: 50%;
-    transform: translateY(-50%);
-
-    width: 800px;
-    height: 800px;
-    position: absolute;
-  }
-
-  .triangleLeft {
-    left: -410px;
-  }
-
-  .triangleRight {
-    right: -410px;
-  }
-
-  .content-area {
+  /* .content-area {
     padding-top: 60px;
     box-sizing: border-box;
     display: flex;
@@ -1399,7 +1361,7 @@ cite {
     position: relative;
     overflow: hidden;
     
-  }
+  } */
 
   /* Overlay styles */
   .menu-overlay {
@@ -1486,7 +1448,7 @@ cite {
   }
 }
 /* --- HIDE MOBILE NAV ON DESKTOP --- */
-@media (min-width: 1280px) {
+@media (min-width: 1523px) {
   .mobile-nav {
     display: none;
   }
