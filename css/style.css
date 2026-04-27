@@ -838,7 +838,7 @@ cite {
 
 /* ----------- MOBILE STYLES ---------------- */
 
-@media (max-width: 1025px) {
+@media (max-width: 1521px) {
   #sidebar {
     display: none;
   }
@@ -1417,7 +1417,7 @@ cite {
   }
 }
 /* --- HIDE MOBILE NAV ON DESKTOP --- */
-@media (min-width: 1025px) {
+@media (min-width: 1521px) {
   .mobile-nav {
     display: none;
   }
