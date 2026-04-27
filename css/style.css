@@ -146,7 +146,7 @@ body {
 }
 
 .logo{
-  width: 15vw;
+  max-width: 200px;
 }
 
 /* //// HOME PAGE //// */
@@ -173,18 +173,20 @@ body {
   pointer-events: none;
   background-size: contain;
   background-repeat: no-repeat;
+  transition: width 0.1s ease-out;
 }
 
 .triangleLeft {
   background-image: url("../img/BgTri_Left.webp");
   background-position: left center;
-  left: -280px;
+  left: -20%;
 }
 
 .triangleRight {
   background-image: url("../img/BgTri_Right.webp");
   background-position: right center;
-  right: -280px;
+  /* right: -280px; */
+  right: -20%;
 }
 
 /* BG ORANGE TRIANGLE FOR OTHER PAGES */
@@ -836,7 +838,7 @@ cite {
 
 /* ----------- MOBILE STYLES ---------------- */
 
-@media (max-width: 992px) {
+@media (max-width: 1025px) {
   #sidebar {
     display: none;
   }
@@ -1224,7 +1226,7 @@ cite {
   /* //////////// MOBILE NAV ////////// */
 
   .logo {
-    height: 50px;
+    width: 20vw;
   }
 
   .mobile-nav {
@@ -1415,7 +1417,7 @@ cite {
   }
 }
 /* --- HIDE MOBILE NAV ON DESKTOP --- */
-@media (min-width: 993px) {
+@media (min-width: 1025px) {
   .mobile-nav {
     display: none;
   }
