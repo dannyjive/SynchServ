@@ -933,6 +933,12 @@ cite {
     order: 2;
   }
 
+    .image-wrapper {
+    flex: none;
+    max-width: 100%;
+    width: 100%;
+  }
+
   .yellowFade-cardRight img {
     width: 100%;
     object-fit: cover;
@@ -1089,7 +1095,7 @@ cite {
     display: inline-block;
     width: 100%;
     padding: 15px 10px;
-    font-size: 0.95rem;
+    font-size: 1.5rem;
     box-sizing: border-box;
   }
 
