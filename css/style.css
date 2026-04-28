@@ -78,7 +78,7 @@ h3 {
 }
 
 h4 {
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 600;
   padding: 0 0 20px 0;
 }
@@ -105,7 +105,7 @@ h4 {
   padding: 20px;
   margin: 0 10px;
   font-family: "Archivo Narrow";
-  font-size: 1.5em;
+  font-size: 24px;
   border: none;
   cursor: pointer;
   transition: background-color 0.3s ease;
@@ -154,8 +154,6 @@ body {
 }
 
 /* //// HOME PAGE //// */
-
-
 
 /* BG ORANGE TRIANGLE FOR OTHER PAGES */
 
@@ -288,17 +286,15 @@ main.content-area {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: url('../img/BgTriangles.webp') no-repeat center center / 140%;
+  background: url("../img/BgTriangles.webp") no-repeat center center / 140%;
   min-height: 100vh;
   z-index: -2;
 }
 
-
 /* ORANGE HOME PAGE CIRCLE */
 
 .circle {
-
-  width: 55vmin; 
+  width: 55vmin;
   height: 55vmin;
   max-width: 550px;
   max-height: 550px;
@@ -371,7 +367,7 @@ main.content-area {
 
 .projLeadershipTextContainer {
   max-width: 850px;
-  padding: 0 90px 20px 90px;
+  padding: 0 20px 10px 20px;
 }
 
 .projLeadershipTextContainer p {
@@ -484,6 +480,10 @@ main.content-area {
   padding: 0 0 30px 0;
 }
 
+.shortYellowTri_TextContainer p {
+  padding: 10px 0 10px 0;
+}
+
 /* ////////// PROJECTS PAGE ////////// */
 
 .yellowFade-cardLeft,
@@ -529,6 +529,10 @@ main.content-area {
   justify-content: space-between;
 }
 
+.textContainer p {
+  line-height: 1.5;
+}
+
 /* TESTIMONIAL CARD */
 
 .card-wrapper {
@@ -540,6 +544,7 @@ blockquote {
   font-size: 1em;
   font-weight: 400;
   max-width: 670px;
+  line-height: 1.5;
 }
 
 .testimonial-card {
@@ -895,7 +900,8 @@ cite {
   /* Mobile Triangles */
 
   main.content-area {
-    background: url('../img/MobileScreenTriangles.webp') no-repeat center center / 300%;
+    background: url("../img/MobileScreenTriangles.webp") no-repeat center
+      center / 300%;
     min-height: 100vh;
     width: 100%;
     padding: 0;
@@ -938,7 +944,7 @@ cite {
     margin: 0;
   }
 
-  /* TRIANGLES ON LEFT CARD */
+  /* MOBILE: TRIANGLES ON LEFT CARD */
 
   .yellowFade-cardLeft {
     display: grid;
@@ -989,6 +995,9 @@ cite {
   }
 
   /* MOBILE: PHASE CARDS */
+
+  /* MOBILE STYLES */
+
   .phase-card {
     flex-direction: column;
     align-items: flex-start;
@@ -996,22 +1005,54 @@ cite {
     width: 80%;
     text-align: left;
     padding: 0 20px;
+    min-height: 700px;
   }
+
+  /*.phase-card {
+     display: flex;
+    align-items: center;
+    position: relative;
+    max-width: 980px;
+    
+    border-radius: var(--card-radius);
+    background: var(--color-teal);
+    overflow: hidden;
+    z-index: 1;
+    text-align: left;
+    margin: 50px;
+    box-shadow: var(--shadow);
+  } */
 
   .phase-card::before {
-    top: -165px;
-    left: -290px;
+    width: 342px;
+    height: 250px;
+    bottom: 505px;
+    left: -150px;
   }
 
-  .phaselogoCentered {
-    align-items: flex-start;
+  .phaseLogoCentered {
+    display: flex;
+    justify-content: flex-start;
+    align-items: left;
     width: 100%;
-    margin-bottom: 15px;
-    padding-bottom: 40px;
+  }
+
+  .phaseFontBoldSeventyFive {
+    font-size: 35px;
+    font-weight: bold;
+    line-height: 1.3;
+  }
+
+  .phaseNumberBoldFourHundred {
+    font-size: 200px;
+    font-family: "Lora", serif;
+    font-weight: bold;
+    line-height: 0.7;
+    display: block;
   }
 
   .mobileOnlyPadding {
-    padding: 50px 0;
+    padding: 30px 0;
   }
 
   /*  MOBILE: YOUR PARTNER IN SUCCESS */
@@ -1219,7 +1260,7 @@ cite {
   /* //////////// MOBILE NAV ////////// */
 
   .logo {
-    width: 20vw;
+    width: 30vw;
   }
 
   .mobile-nav {
