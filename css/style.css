@@ -60,6 +60,7 @@
 h1 {
   font-family: "Julius Sans One", sans-serif;
   font-size: 50px;
+  font-weight: normal;
 }
 
 h2 {
@@ -138,7 +139,7 @@ body {
   font-weight: 400;
   font-style: normal;
   background-color: var(--color-off-white);
-  display: flex;
+  display: grid;
   color: var(--color-off-white);
   margin: 0;
   padding: 0;
@@ -150,84 +151,12 @@ body {
 
 /* //// HOME PAGE //// */
 
-/* BG TRIANGLES */
-.content-area {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  overflow: hidden;
+/* HOME PAGE BG TRIANGLE */
+main.content-area {
+  background: url('../img/BgTriangles.webp') no-repeat center center / 140%;
   min-height: 100vh;
-  width: 100%;
-  overflow: hidden;
+  z-index: -2;
 }
-
-/* Container to hold both triangles and create the gap */
-.triangle-container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100vw;
-  height: 100vh;
-  overflow: visible;
-
-  z-index: -1;
-  pointer-events: none;
-}
-
-.triangle {
-  position: relative;
-  top: auto;
-  left: auto;
-  right: auto;
-  transform: none;
-  flex-shrink: 0;
-  width: 900px;
-  height: 900px;
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-
-.triangleLeft {
-  background-image: url("../img/BgTri_Left.webp");
-  background-position: right center;
-  margin-right: -100px;
-}
-
-.triangleRight {
-  background-image: url("../img/BgTri_Right.webp");
-  background-position: left center;
-  margin-left: -100px;
-}
-
-/* .triangle {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 90%;
-  min-height: 90%;
-  z-index: -1;
-  pointer-events: none;
-  background-size: contain;
-  background-repeat: no-repeat;
-  transition: width 0.1s ease-out;
-}
-
-.triangleLeft {
-  background-image: url("../img/BgTri_Left.webp");
-  background-position: left center;
-  left: -20%;
-}
-
-.triangleRight {
-  background-image: url("../img/BgTri_Right.webp");
-  background-position: right center;
-  right: -20%;
-} */
 
 /* BG ORANGE TRIANGLE FOR OTHER PAGES */
 
@@ -283,12 +212,10 @@ body {
     var(--color-light-teal)
   );
   border-left: 10px solid var(--color-dark-orange);
-  position: fixed;
   top: 0;
   left: 0;
   height: 100vh;
   box-sizing: border-box;
-
   min-width: 300px;
   flex-shrink: 0;
   display: flex;
@@ -347,17 +274,17 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100vw;
+  width: 100%;
 }
 
 /* Home Page BG Triangles */
 main.content-area {
-  display: flex;
+  /* display: flex; */
   flex: 1;
-  height: 100vh;
+  width: auto;
+  min-height: 100vh;
   position: relative;
   overflow: hidden;
-  /* padding: 40px; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -366,22 +293,31 @@ main.content-area {
 /* ORANGE HOME PAGE CIRCLE */
 
 .circle {
-  width: 550px;
-  height: 550px;
+
+  width: 50vmin; 
+  height: 50vmin;
+  
+  max-width: 550px;
+  max-height: 550px;
+
+  line-height: 1.2;
+  aspect-ratio: 1 / 1;
   background-color: var(--color-orange);
   border-radius: 50%;
   padding: 30px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 50px;
+  gap: 40px;
   align-items: center;
   text-align: center;
   margin: 0;
+  position: relative;
+  z-index: 2;
 }
 
 .slugline {
-  font-size: 30px;
+  font-size: clamp(20px, 4vw, 30px);
 }
 
 /* ///////////// SERVICES PAGE ////////// */
@@ -882,14 +818,30 @@ cite {
 
 /* ----------- MOBILE STYLES ---------------- */
 
-@media (max-width: 1523px) {
+@media (min-width: 1200px) {
+  body {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+  }
+
+  #sidebar {
+    grid-column: 1;
+  }
+
+  main {
+    grid-column: 2;
+    width: 100%;
+  }
+}
+
+@media (max-width: 1199px) {
   #sidebar {
     display: none;
   }
 
   main {
     width: 100%;
-    margin-left: 0;
+    margin-left: 0px;
   }
 
   .bg-triangle {
@@ -939,6 +891,17 @@ cite {
 
   /* Mobile Triangles */
 
+  .triangle {
+    width: 60vw;
+    height: 60vw;
+    max-width: 900px;
+    max-height: 900px;
+    /*    width: 90vw;
+    height: 90vw;
+    max-width: 900px;
+  max-height: 900px; */
+  }
+
   .triangleLeft {
     background-position: right center;
     margin-right: -200px;
@@ -956,7 +919,7 @@ cite {
   .yellowFade-cardRight {
     display: grid;
     grid-template-columns: 1fr;
-    width: 100vw;
+    width: 100%;
     padding: 0;
     overflow: hidden;
   }
@@ -1448,7 +1411,7 @@ cite {
   }
 }
 /* --- HIDE MOBILE NAV ON DESKTOP --- */
-@media (min-width: 1523px) {
+@media (min-width: 1200px) {
   .mobile-nav {
     display: none;
   }
