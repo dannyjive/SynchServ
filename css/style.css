@@ -59,8 +59,12 @@
 
 h1 {
   font-family: "Julius Sans One", sans-serif;
-  font-size: 50px;
+  font-size: clamp(20px, 5vw, 45px);
   font-weight: normal;
+  line-height: 1.1;
+  max-width: 80%;
+  width: 100%;
+  margin: 0 auto;
 }
 
 h2 {
@@ -151,12 +155,7 @@ body {
 
 /* //// HOME PAGE //// */
 
-/* HOME PAGE BG TRIANGLE */
-main.content-area {
-  background: url('../img/BgTriangles.webp') no-repeat center center / 140%;
-  min-height: 100vh;
-  z-index: -2;
-}
+
 
 /* BG ORANGE TRIANGLE FOR OTHER PAGES */
 
@@ -188,6 +187,7 @@ main.content-area {
   display: grid;
   place-items: center;
   text-align: center;
+  width: 90%;
   max-width: 550px;
   margin: 0 auto;
   min-height: 90px;
@@ -277,9 +277,9 @@ main {
   width: 100%;
 }
 
-/* Home Page BG Triangles */
+/* HOME PAGE BG TRIANGLE */
+
 main.content-area {
-  /* display: flex; */
   flex: 1;
   width: auto;
   min-height: 100vh;
@@ -288,15 +288,18 @@ main.content-area {
   display: flex;
   justify-content: center;
   align-items: center;
+  background: url('../img/BgTriangles.webp') no-repeat center center / 140%;
+  min-height: 100vh;
+  z-index: -2;
 }
+
 
 /* ORANGE HOME PAGE CIRCLE */
 
 .circle {
 
-  width: 50vmin; 
-  height: 50vmin;
-  
+  width: 55vmin; 
+  height: 55vmin;
   max-width: 550px;
   max-height: 550px;
 
@@ -304,11 +307,11 @@ main.content-area {
   aspect-ratio: 1 / 1;
   background-color: var(--color-orange);
   border-radius: 50%;
-  padding: 30px;
+  padding: 5%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 40px;
+  gap: 50px;
   align-items: center;
   text-align: center;
   margin: 0;
@@ -891,25 +894,12 @@ cite {
 
   /* Mobile Triangles */
 
-  .triangle {
-    width: 60vw;
-    height: 60vw;
-    max-width: 900px;
-    max-height: 900px;
-    /*    width: 90vw;
-    height: 90vw;
-    max-width: 900px;
-  max-height: 900px; */
-  }
-
-  .triangleLeft {
-    background-position: right center;
-    margin-right: -200px;
-  }
-
-  .triangleRight {
-    background-position: left center;
-    margin-left: -200px;
+  main.content-area {
+    background: url('../img/MobileScreenTriangles.webp') no-repeat center center / 300%;
+    min-height: 100vh;
+    width: 100%;
+    padding: 0;
+    margin: 0;
   }
 
   /* ////// MOBILE: PROJECTS PAGE ////// */
