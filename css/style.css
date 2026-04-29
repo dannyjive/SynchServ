@@ -1,3 +1,7 @@
+/* TODO: Fix width of cards for 1200 width screens */
+/* TODO: Fix Projects page on ultra wide screen */
+/*  */
+
 * {
   /* border: red 1px solid;
   box-sizing: border-box;*/
@@ -187,8 +191,7 @@ body {
   display: grid;
   place-items: center;
   text-align: center;
-  width: 90%;
-  max-width: 550px;
+  max-width: 100%;
   margin: 0 auto;
   min-height: 90px;
   overflow: visible;
@@ -275,6 +278,7 @@ main {
   justify-content: center;
   align-items: center;
   width: 100%;
+
 }
 
 /* HOME PAGE BG TRIANGLE */
@@ -298,7 +302,7 @@ main.content-area {
 .circle {
   width: 55vmin;
   height: 55vmin;
-  max-width: 80%;
+  max-width: 95%;
   max-height: 550px;
 
   line-height: 1.2;
@@ -587,19 +591,23 @@ cite {
 
 /* /////// RESOURCE PAGE /////// */
 
+
+
+
 /* RESOURCES Image on Right Card */
 
 .yellowImgRight-card {
   position: relative;
   display: flex;
-  align-items: stretch;
+  align-items: center;
+  justify-content: space-between;
   max-width: 980px;
   min-height: 364px;
   background: var(--color-orange);
   border-radius: var(--card-radius);
   overflow: hidden;
   z-index: 1;
-  margin: 50px auto;
+  margin: 50px 20px;
   box-shadow: var(--shadow);
 }
 
@@ -620,11 +628,12 @@ cite {
 }
 
 .text-content-left {
-  width: 40%;
+  width: 50%;
   text-align: left;
   padding: 40px;
   display: flex;
   flex-direction: column;
+  align-self: stretch;
   justify-content: flex-start;
 }
 
@@ -638,18 +647,75 @@ cite {
 }
 
 .clipped-image-right {
-  position: absolute;
-  right: 1px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 486px;
+  margin-left: auto;
+  justify-content: flex-end;
+  width: 50%;
   height: 364px;
-  object-fit: contain;
+  object-fit:fill;
 }
+
 
 /* RESOURCES Image on Left Card */
 
 .yellowImgLeft-card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 980px;
+  min-height: 364px;
+  background: var(--color-orange);
+  border-radius: var(--card-radius);
+  overflow: hidden;
+  z-index: 1;
+  margin: 50px 20px;
+  box-shadow: var(--shadow);
+}
+
+.yellowImgLeft-card::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 617px;
+  height: 617px;
+  top: -240px;
+  left: -200px;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(203, 120, 53, 1),
+    rgba(243, 189, 114, 1)
+  );
+}
+
+.text-content-right {
+  width: 50%;
+  text-align: right;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-self: stretch;
+  justify-content: flex-start;
+}
+
+.text-content-right .blueButton {
+  align-self: flex-end;
+  margin-top: auto;
+  margin-left: 0;
+  width: 200px;
+  text-align: center;
+  font-size: 1.5em;
+}
+
+.clipped-image-left {
+  margin-left: auto;
+  justify-content: flex-end;
+  width: 50%;
+  height: 364px;
+  object-fit:fill;
+}
+
+/* .yellowImgLeft-card {
   position: relative;
   display: flex;
   align-items: stretch;
@@ -659,7 +725,7 @@ cite {
   border-radius: var(--card-radius);
   overflow: hidden;
   z-index: 1;
-  margin: 50px auto;
+  margin: 50px 20px;
   box-shadow: var(--shadow);
 }
 
@@ -699,7 +765,6 @@ cite {
 }
 
 .clipped-image-left {
-  /* pin img to the right */
   position: absolute;
   left: 0px;
   top: 50%;
@@ -707,7 +772,7 @@ cite {
   width: 486px;
   height: 364px;
   object-fit: contain;
-}
+} */
 
 /* ////// ABOUT ////// */
 
