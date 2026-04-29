@@ -1,6 +1,3 @@
-/* TODO: Fix width of cards for 1200 width screens */
-/* TODO: Fix Projects page on ultra wide screen */
-/*  */
 
 * {
   /* border: red 1px solid;
@@ -87,6 +84,10 @@ h4 {
   font-size: 22px;
   font-weight: 600;
   padding: 0 0 20px 0;
+}
+
+p {
+  line-height: 1.5em;
 }
 
 .underline {
@@ -278,7 +279,6 @@ main {
   justify-content: center;
   align-items: center;
   width: 100%;
-
 }
 
 /* HOME PAGE BG TRIANGLE */
@@ -406,6 +406,7 @@ main.content-area {
 
 .triangleBullets {
   padding-left: 20px;
+  line-height: 1.5em;
 }
 
 .triangleBullets::before {
@@ -502,9 +503,8 @@ main.content-area {
 }
 
 .image-wrapper {
-  /* Adjust image size here */
-  flex: 0 0 55%;
-  max-width: 55%;
+  flex: 0 1 55%;
+  max-width: 800px;
 }
 
 .yellowFade-cardRight img,
@@ -512,6 +512,7 @@ main.content-area {
   max-width: 100%;
   height: auto;
   display: block;
+  max-height: 500px;
 }
 
 .yellowFade-cardRight {
@@ -591,9 +592,6 @@ cite {
 
 /* /////// RESOURCE PAGE /////// */
 
-
-
-
 /* RESOURCES Image on Right Card */
 
 .yellowImgRight-card {
@@ -651,9 +649,8 @@ cite {
   justify-content: flex-end;
   width: 50%;
   height: 364px;
-  object-fit:fill;
+  object-fit: fill;
 }
-
 
 /* RESOURCES Image on Left Card */
 
@@ -712,67 +709,8 @@ cite {
   justify-content: flex-end;
   width: 50%;
   height: 364px;
-  object-fit:fill;
+  object-fit: fill;
 }
-
-/* .yellowImgLeft-card {
-  position: relative;
-  display: flex;
-  align-items: stretch;
-  max-width: 980px;
-  min-height: 364px;
-  background: var(--color-orange);
-  border-radius: var(--card-radius);
-  overflow: hidden;
-  z-index: 1;
-  margin: 50px 20px;
-  box-shadow: var(--shadow);
-}
-
-.yellowImgLeft-card::before {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  width: 617px;
-  height: 617px;
-  top: -240px;
-  right: -200px;
-  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-  background: linear-gradient(
-    180deg,
-    rgba(203, 120, 53, 1),
-    rgba(243, 189, 114, 1)
-  );
-}
-
-.text-content-right {
-  width: 40%;
-  text-align: right;
-  padding: 40px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  margin-left: auto;
-}
-
-.text-content-right .blueButton {
-  align-self: flex-end;
-  margin-top: auto;
-  margin-right: 0;
-  width: 200px;
-  text-align: center;
-  font-size: 1.5em;
-}
-
-.clipped-image-left {
-  position: absolute;
-  left: 0px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 486px;
-  height: 364px;
-  object-fit: contain;
-} */
 
 /* ////// ABOUT ////// */
 
@@ -825,7 +763,7 @@ cite {
   );
   overflow: hidden;
   padding: 60px;
-  margin: 50px auto;
+  margin: 50px 20px;
   box-shadow: var(--shadow);
 }
 
@@ -1014,7 +952,7 @@ cite {
     order: 2;
   }
 
-    .image-wrapper {
+  .image-wrapper {
     flex: none;
     max-width: 100%;
     width: 100%;
