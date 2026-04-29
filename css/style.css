@@ -59,12 +59,14 @@
 
 h1 {
   font-family: "Julius Sans One", sans-serif;
-  font-size: clamp(20px, 5vw, 45px);
+  font-size: clamp(20px, 2.5vw, 45px);
   font-weight: normal;
   line-height: 1.1;
   max-width: 80%;
   width: 100%;
+  max-width: 60%;
   margin: 0 auto;
+  text-wrap: balance;
 }
 
 h2 {
@@ -296,18 +298,18 @@ main.content-area {
 .circle {
   width: 55vmin;
   height: 55vmin;
-  max-width: 550px;
+  max-width: 80%;
   max-height: 550px;
 
   line-height: 1.2;
   aspect-ratio: 1 / 1;
   background-color: var(--color-orange);
   border-radius: 50%;
-  padding: 5%;
+  padding: 4rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 50px;
+  gap: 40px;
   align-items: center;
   text-align: center;
   margin: 0;
@@ -340,7 +342,7 @@ main.content-area {
   text-align: center;
 
   padding: 50px;
-  margin: 80px;
+  margin: 50px;
   box-shadow: var(--shadow);
 }
 
@@ -784,7 +786,7 @@ cite {
 
 .affiliations {
   display: flex;
-  justify-content: left;
+  justify-content: center;
   align-items: center;
   gap: 30px;
 }
@@ -792,11 +794,7 @@ cite {
 .affiliations img {
   height: 90px;
   width: auto;
-  margin-top: 40px;
-}
-
-#nrdBadge {
-  background-color: white;
+  margin-top: 20px;
 }
 
 /* Let's Build your Vision Card */
@@ -881,6 +879,7 @@ cite {
   /* /////// MOBILE: HOME PAGE /////// */
 
   h1 {
+    max-width: 60%;
     font-size: 30px;
   }
 
