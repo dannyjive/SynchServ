@@ -60,13 +60,13 @@
 
 h1 {
   font-family: "Julius Sans One", sans-serif;
-  font-size: clamp(20px, 2.5vw, 45px);
+  font-size: clamp(30px, 2.5vw, 50px);
   font-weight: normal;
   line-height: 1.1;
   max-width: 100%;
   width: 100%;
   margin: 0 auto;
-  text-wrap: balance;
+  text-wrap: normal;
 }
 
 h2 {
@@ -299,10 +299,12 @@ main.content-area {
 /* ORANGE HOME PAGE CIRCLE */
 
 .circle {
-  width: 55vmin;
+    width: min(55vmin, 550px);
+  aspect-ratio: 1 / 1;
+ /* width: 55vmin;
   height: 55vmin;
-  max-width: 95%;
-  max-height: 550px;
+   max-width: 95%;
+  max-height: 550px; */
   line-height: 1.2;
   aspect-ratio: 1 / 1;
   background-color: var(--color-orange);
@@ -899,7 +901,7 @@ cite {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 20px;
+    gap: 10px;
     align-items: center;
     text-align: center;
     margin: 0;
